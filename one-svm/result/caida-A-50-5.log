@@ -1,0 +1,337 @@
+(dgl) songyima@155:/data/sym/one-class-svm$ python svm_train.py 200 0.1
+start time 2020-10-10 18:04:16.387139
+thres:  200
+nu:  0.1
+cycle: 0
+svm_train.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+svm_train.py:31: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+original mice count:  55879
+original elephant count:  13108
+[[10130  1002]
+ [  300  2366]]
+              precision    recall  f1-score   support
+
+          -1       0.97      0.91      0.94     11132
+           1       0.70      0.89      0.78      2666
+
+    accuracy                           0.91     13798
+   macro avg       0.84      0.90      0.86     13798
+weighted avg       0.92      0.91      0.91     13798
+
+cycle: 1
+svm_train.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+svm_train.py:31: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+original mice count:  56872
+original elephant count:  14204
+[[10492   933]
+ [  322  2469]]
+              precision    recall  f1-score   support
+
+          -1       0.97      0.92      0.94     11425
+           1       0.73      0.88      0.80      2791
+
+    accuracy                           0.91     14216
+   macro avg       0.85      0.90      0.87     14216
+weighted avg       0.92      0.91      0.91     14216
+
+cycle: 2
+svm_train.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+svm_train.py:31: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+original mice count:  55928
+original elephant count:  13832
+[[10258   999]
+ [  280  2415]]
+              precision    recall  f1-score   support
+
+          -1       0.97      0.91      0.94     11257
+           1       0.71      0.90      0.79      2695
+
+    accuracy                           0.91     13952
+   macro avg       0.84      0.90      0.87     13952
+weighted avg       0.92      0.91      0.91     13952
+
+cycle: 3
+svm_train.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+svm_train.py:31: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+original mice count:  55888
+original elephant count:  13645
+[[10093  1060]
+ [  291  2463]]
+              precision    recall  f1-score   support
+
+          -1       0.97      0.90      0.94     11153
+           1       0.70      0.89      0.78      2754
+
+    accuracy                           0.90     13907
+   macro avg       0.84      0.90      0.86     13907
+weighted avg       0.92      0.90      0.91     13907
+
+cycle: 4
+svm_train.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+svm_train.py:31: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+original mice count:  55267
+original elephant count:  13451
+[[9914 1171]
+ [ 285 2374]]
+              precision    recall  f1-score   support
+
+          -1       0.97      0.89      0.93     11085
+           1       0.67      0.89      0.77      2659
+
+    accuracy                           0.89     13744
+   macro avg       0.82      0.89      0.85     13744
+weighted avg       0.91      0.89      0.90     13744
+
+cycle: 5
+svm_train.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+svm_train.py:31: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+original mice count:  54490
+original elephant count:  13409
+[[9824  993]
+ [ 281 2482]]
+              precision    recall  f1-score   support
+
+          -1       0.97      0.91      0.94     10817
+           1       0.71      0.90      0.80      2763
+
+    accuracy                           0.91     13580
+   macro avg       0.84      0.90      0.87     13580
+weighted avg       0.92      0.91      0.91     13580
+
+cycle: 6
+svm_train.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+svm_train.py:31: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+original mice count:  55298
+original elephant count:  13508
+[[10168   856]
+ [  295  2443]]
+              precision    recall  f1-score   support
+
+          -1       0.97      0.92      0.95     11024
+           1       0.74      0.89      0.81      2738
+
+    accuracy                           0.92     13762
+   macro avg       0.86      0.91      0.88     13762
+weighted avg       0.93      0.92      0.92     13762
+
+cycle: 7
+svm_train.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+svm_train.py:31: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+original mice count:  54691
+original elephant count:  13329
+[[9894  997]
+ [ 280 2433]]
+              precision    recall  f1-score   support
+
+          -1       0.97      0.91      0.94     10891
+           1       0.71      0.90      0.79      2713
+
+    accuracy                           0.91     13604
+   macro avg       0.84      0.90      0.87     13604
+weighted avg       0.92      0.91      0.91     13604
+
+cycle: 8
+svm_train.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+svm_train.py:31: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+original mice count:  56518
+original elephant count:  13663
+[[10356   938]
+ [  279  2464]]
+              precision    recall  f1-score   support
+
+          -1       0.97      0.92      0.94     11294
+           1       0.72      0.90      0.80      2743
+
+    accuracy                           0.91     14037
+   macro avg       0.85      0.91      0.87     14037
+weighted avg       0.93      0.91      0.92     14037
+
+cycle: 9
+svm_train.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+svm_train.py:31: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+original mice count:  52133
+original elephant count:  12948
+[[9396 1072]
+ [ 250 2299]]
+              precision    recall  f1-score   support
+
+          -1       0.97      0.90      0.93     10468
+           1       0.68      0.90      0.78      2549
+
+    accuracy                           0.90     13017
+   macro avg       0.83      0.90      0.86     13017
+weighted avg       0.92      0.90      0.90     13017
+
+end time 2020-10-10 18:09:52.524454
+duration 336
+
+online
+start time 2020-10-10 18:09:04.261814
+thres:  200
+nu:  0.1
+cycle: 2
+svm_train_online.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+svm_train_online.py:31: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+original mice count:  44200
+original elephant count:  25560
+[[ 935 7960]
+ [ 536 4521]]
+              precision    recall  f1-score   support
+
+          -1       0.64      0.11      0.18      8895
+           1       0.36      0.89      0.52      5057
+
+    accuracy                           0.39     13952
+   macro avg       0.50      0.50      0.35     13952
+weighted avg       0.54      0.39      0.30     13952
+
+cycle: 3
+svm_train_online.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+svm_train_online.py:31: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+original mice count:  44465
+original elephant count:  25068
+[[1012 7927]
+ [ 535 4433]]
+              precision    recall  f1-score   support
+
+          -1       0.65      0.11      0.19      8939
+           1       0.36      0.89      0.51      4968
+
+    accuracy                           0.39     13907
+   macro avg       0.51      0.50      0.35     13907
+weighted avg       0.55      0.39      0.31     13907
+
+cycle: 4
+svm_train_online.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+svm_train_online.py:31: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+original mice count:  43602
+original elephant count:  25116
+[[ 968 7837]
+ [ 542 4397]]
+              precision    recall  f1-score   support
+
+          -1       0.64      0.11      0.19      8805
+           1       0.36      0.89      0.51      4939
+
+    accuracy                           0.39     13744
+   macro avg       0.50      0.50      0.35     13744
+weighted avg       0.54      0.39      0.30     13744
+
+cycle: 5
+svm_train_online.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+svm_train_online.py:31: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+original mice count:  42865
+original elephant count:  25034
+[[1004 7596]
+ [ 528 4452]]
+              precision    recall  f1-score   support
+
+          -1       0.66      0.12      0.20      8600
+           1       0.37      0.89      0.52      4980
+
+    accuracy                           0.40     13580
+   macro avg       0.51      0.51      0.36     13580
+weighted avg       0.55      0.40      0.32     13580
+
+cycle: 6
+svm_train_online.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+svm_train_online.py:31: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+original mice count:  43739
+original elephant count:  25067
+[[ 955 7742]
+ [ 563 4502]]
+              precision    recall  f1-score   support
+
+          -1       0.63      0.11      0.19      8697
+           1       0.37      0.89      0.52      5065
+
+    accuracy                           0.40     13762
+   macro avg       0.50      0.50      0.35     13762
+weighted avg       0.53      0.40      0.31     13762
+
+cycle: 7
+svm_train_online.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+svm_train_online.py:31: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+original mice count:  43301
+original elephant count:  24719
+[[ 970 7755]
+ [ 502 4377]]
+              precision    recall  f1-score   support
+
+          -1       0.66      0.11      0.19      8725
+           1       0.36      0.90      0.51      4879
+
+    accuracy                           0.39     13604
+   macro avg       0.51      0.50      0.35     13604
+weighted avg       0.55      0.39      0.31     13604
+
+cycle: 8
+svm_train_online.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+svm_train_online.py:31: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+original mice count:  45030
+original elephant count:  25151
+[[1178 7719]
+ [ 543 4597]]
+              precision    recall  f1-score   support
+
+          -1       0.68      0.13      0.22      8897
+           1       0.37      0.89      0.53      5140
+
+    accuracy                           0.41     14037
+   macro avg       0.53      0.51      0.37     14037
+weighted avg       0.57      0.41      0.33     14037
+
+cycle: 9
+svm_train_online.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+svm_train_online.py:31: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+original mice count:  40810
+original elephant count:  24271
+[[1140 7046]
+ [ 497 4334]]
+              precision    recall  f1-score   support
+
+          -1       0.70      0.14      0.23      8186
+           1       0.38      0.90      0.53      4831
+
+    accuracy                           0.42     13017
+   macro avg       0.54      0.52      0.38     13017
+weighted avg       0.58      0.42      0.34     13017
+
+end time 2020-10-10 18:15:32.577695
+duration 388

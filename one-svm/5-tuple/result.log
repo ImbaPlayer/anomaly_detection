@@ -1,0 +1,97 @@
+对于只使用五元组，不能保证大小流的准确率都高，将大流视为异常流也不行，只能保证单个的准确率较高。
+original mice count:  55879
+original elephant count:  13108
+[[2880 8252]
+ [ 287 2379]]
+              precision    recall  f1-score   support
+
+          -1       0.91      0.26      0.40     11132
+           1       0.22      0.89      0.36      2666
+
+    accuracy                           0.38     13798
+   macro avg       0.57      0.58      0.38     13798
+weighted avg       0.78      0.38      0.39     13798
+
+thres:  200
+nu:  0.1
+cycle: 0
+svm_train_5.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+svm_train_5.py:31: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+original mice count:  55879
+original elephant count:  13108
+[[1399 9812]
+ [ 280 2307]]
+              precision    recall  f1-score   support
+
+          -1       0.83      0.12      0.22     11211
+           1       0.19      0.89      0.31      2587
+
+    accuracy                           0.27     13798
+   macro avg       0.51      0.51      0.27     13798
+weighted avg       0.71      0.27      0.24     13798
+
+svm_train_5.py:72: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+svm_train_5.py:73: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+original mice count:  55879
+original elephant count:  13108
+[[ 329 2258]
+ [1217 9994]]
+              precision    recall  f1-score   support
+
+          -1       0.21      0.13      0.16      2587
+           1       0.82      0.89      0.85     11211
+
+    accuracy                           0.75     13798
+   macro avg       0.51      0.51      0.51     13798
+weighted avg       0.70      0.75      0.72     13798
+
+
+增加第一个包的包长
+start time 2020-10-15 14:17:08.692813
+thres:  200
+nu:  0.1
+cycle: 0
+svm_train_5.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+svm_train_5.py:31: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+original mice count:  55879
+original elephant count:  13108
+[[4481 6730]
+ [ 316 2271]]
+              precision    recall  f1-score   support
+
+          -1       0.93      0.40      0.56     11211
+           1       0.25      0.88      0.39      2587
+
+    accuracy                           0.49     13798
+   macro avg       0.59      0.64      0.48     13798
+weighted avg       0.81      0.49      0.53     13798
+
+
+svm_train_5.py:72: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+svm_train_5.py:73: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+original mice count:  55879
+original elephant count:  13108
+[[ 402 2185]
+ [1269 9942]]
+              precision    recall  f1-score   support
+
+          -1       0.24      0.16      0.19      2587
+           1       0.82      0.89      0.85     11211
+
+    accuracy                           0.75     13798
+   macro avg       0.53      0.52      0.52     13798
+weighted avg       0.71      0.75      0.73     13798
+
+end time 2020-10-15 14:20:40.646140
+duration 211
+
+
+对于offline-all，新的10的数据包中，length采用实际字节流的长度，而非ip.len

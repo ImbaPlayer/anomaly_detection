@@ -1,13 +1,7 @@
-# -*- coding: utf-8 -*-
-# @Author: Guanglin Duan
-# @Date:   2020-11-08 00:34:57
-# @Last Modified by:   Guanglin Duan
-# @Last Modified time: 2020-11-08 11:42:05
 from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report,confusion_matrix
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.ensemble import IsolationForest
 from sklearn import svm
 from datetime import datetime
 import pandas as pd
@@ -17,8 +11,7 @@ import sys
 # from tqdm import tqdm
 
 thres = int(sys.argv[1])
-rng = np.random.RandomState(10)
-conta = 0.1
+nu = float(sys.argv[2])
 # fit the model, mice: -1, ele: 1
 def mice_outliers(num):
     # num = 10
@@ -28,51 +21,30 @@ def mice_outliers(num):
     # fileName2 = "/data/sym/one-class-svm/data/mean_of_five/bin-feature/univ1-50W-{0}-{1}.csv".format(5, num)
     df = pd.read_csv(fileName1)
     dfb = pd.read_csv(fileName2)
-    # dropCol = []
-    # for i in range(33):
-    #     dropCol.append('Pkt1-%d' % i)
-    #     dropCol.append('Pkt2-%d' % i)
-    #     dropCol.append('Pkt3-%d' % i)
-    # dfb = dfb.drop(dropCol, axis=1)
-    
-    #conver to matrix
-    X = dfb.values
-    X[X=='0'] = -1
-    X[X=='1'] = 1
-    yr = df['flowSize']
 
-    # thres = int(sys.argv[1])
-    # thres = 200
-    yc = yr.copy(deep=True)
-    yc[yr > thres] = 1
-    yc[yr <= thres ] = -1
-    print("original mice count: ", sum(yc==-1))
-    print("original elephant count: ", sum(yc==1))
-
-    # split into train and test
-    X_train, X_test, y_train, y_test = train_test_split(X, yc, test_size=0.2, random_state=10)
-    # split train to ele and mice
-    X_train_ele = X_train[y_train == 1]
-    X_train_mice = X_train[y_train == -1]
-    
-
-    # use ele train to fit the model
-    # clf = svm.OneClassSVM(nu=nu, kernel='rbf', gamma='scale')
-    clf = IsolationForest(max_samples=0.2, n_estimators=300, contamination=conta, random_state=rng)
-    clf.fit(X_train_ele)
-    # predict
-    # y_pred_train = clf.predict(X_train)
-    # c_matrix = confusion_matrix(y_train, y_pred_train)
-    # print(c_matrix)
-    # print(classification_report(y_train, y_pred_train))
-
-    y_pred_test = clf.predict(X_test)
-    c_matrix = confusion_matrix(y_test, y_pred_test)
-    print(c_matrix)
-    print(classification_report(y_test, y_pred_test))
+    # drop 5-tuple
+    drop_cols = []
+    SP_cols = ['SP%d' % i for i in range(16)]
+    DP_cols = ['DP%d' % i for i in range(16)]
+    drop_cols.extend(SP_cols)
+    drop_cols.extend(DP_cols)
+    for i in range(4):
+        #source address cols
+        SA_cols = ['SA%d' % (i*8 + j) for j in range(8)]
+        drop_cols.extend(SA_cols)
+    for i in range(4):
+        #source address cols
+        DA_cols = ['DA%d' % (i*8 + j) for j in range(8)]
+        drop_cols.extend(DA_cols)
+    Proto_cols = ['Proto-%d'%i for i in range(3)]
+    drop_cols.extend(Proto_cols)
+    print("drop_cols", drop_cols)
+    dfb = dfb.drop(drop_cols, axis=1)
+    print(dfb)
 
 # fit the model, mice: 1, ele: -1
 def ele_outliers(num):
+    # num = 10
     # fileName1 = "/data/sym/one-class-svm/data/mean_of_five/dec-feature/caida-B-50W-5-{}.csv".format(num)
     # fileName2 = "/data/sym/one-class-svm/data/mean_of_five/bin-feature/caida-B-50W-5-{}.csv".format(num)
     fileName1 = "/data/sym/one-class-svm/data/mean_of_five/dec-feature/univ1-50W-{0}-{1}.csv".format(5, num)
@@ -102,8 +74,7 @@ def ele_outliers(num):
     X_train_mice = X_train[y_train == 1]
 
     # use mice to fit the model mice: 1, ele: -1
-    # clf = svm.OneClassSVM(nu=nu, kernel='rbf', gamma='scale')
-    clf = IsolationForest(max_samples=0.2, n_estimators=300, contamination=conta, random_state=rng)
+    clf = svm.OneClassSVM(nu=nu, kernel='rbf', gamma='scale')
     clf.fit(X_train_mice)
 
     # predict
@@ -121,11 +92,11 @@ if __name__ == '__main__':
     print("start time", a)
 
     print("thres: ", thres)
-    print("conta: ", conta)
-    for i in range(1, 10):
+    print("nu: ", nu)
+    for i in range(1):
         print("cycle:", i)
-        # mice_outliers(i)
-        ele_outliers(i)
+        mice_outliers(i)
+        # ele_outliers(i)
     
     b = datetime.now()
     print("end time", b)

@@ -1,0 +1,432 @@
+caida-A 50W
+gamma = 0.1
+ele 1
+thres:  200
+original mice count:  55879
+original elephant count:  13108
+[[44599   148]
+ [ 2036  8406]]
+              precision    recall  f1-score   support
+
+          -1       0.96      1.00      0.98     44747
+           1       0.98      0.81      0.89     10442
+
+    accuracy                           0.96     55189
+   macro avg       0.97      0.90      0.93     55189
+weighted avg       0.96      0.96      0.96     55189
+
+[[11091    41]
+ [ 1048  1618]]
+              precision    recall  f1-score   support
+
+          -1       0.91      1.00      0.95     11132
+           1       0.98      0.61      0.75      2666
+
+    accuracy                           0.92     13798
+   macro avg       0.94      0.80      0.85     13798
+weighted avg       0.93      0.92      0.91     13798
+
+mice 1
+thres:  250
+original mice count:  58330
+original elephant count:  10657
+[[ 8187   320]
+ [ 5218 41464]]
+              precision    recall  f1-score   support
+
+          -1       0.61      0.96      0.75      8507
+           1       0.99      0.89      0.94     46682
+
+    accuracy                           0.90     55189
+   macro avg       0.80      0.93      0.84     55189
+weighted avg       0.93      0.90      0.91     55189
+
+[[2079   71]
+ [2139 9509]]
+              precision    recall  f1-score   support
+
+          -1       0.49      0.97      0.65      2150
+           1       0.99      0.82      0.90     11648
+
+    accuracy                           0.84     13798
+   macro avg       0.74      0.89      0.77     13798
+weighted avg       0.91      0.84      0.86     13798
+
+mice 1
+thres:  200
+original mice count:  55879
+original elephant count:  13108
+[[10376    66]
+ [ 5158 39589]]
+              precision    recall  f1-score   support
+
+          -1       0.67      0.99      0.80     10442
+           1       1.00      0.88      0.94     44747
+
+    accuracy                           0.91     55189
+   macro avg       0.83      0.94      0.87     55189
+weighted avg       0.94      0.91      0.91     55189
+
+[[2645   21]
+ [1995 9137]]
+              precision    recall  f1-score   support
+
+          -1       0.57      0.99      0.72      2666
+           1       1.00      0.82      0.90     11132
+
+    accuracy                           0.85     13798
+   macro avg       0.78      0.91      0.81     13798
+weighted avg       0.92      0.85      0.87     13798
+
+end time 2020-09-26 17:29:35.275927
+duration 1454
+
+caida-A 50W
+gamma = scale
+ele = 1
+thres:  200
+original mice count:  55879
+original elephant count:  13108
+[[40576  4171]
+ [ 1038  9404]]
+              precision    recall  f1-score   support
+
+          -1       0.98      0.91      0.94     44747
+           1       0.69      0.90      0.78     10442
+
+    accuracy                           0.91     55189
+   macro avg       0.83      0.90      0.86     55189
+weighted avg       0.92      0.91      0.91     55189
+
+[[10130  1002]
+ [  300  2366]]
+              precision    recall  f1-score   support
+
+          -1       0.97      0.91      0.94     11132
+           1       0.70      0.89      0.78      2666
+
+    accuracy                           0.91     13798
+   macro avg       0.84      0.90      0.86     13798
+weighted avg       0.92      0.91      0.91     13798
+
+end time 2020-09-26 22:22:10.555863
+duration 74
+
+gamma = auto
+ele = 1
+thres:  200
+original mice count:  55879
+original elephant count:  13108
+[[37268  7479]
+ [ 1041  9401]]
+              precision    recall  f1-score   support
+
+          -1       0.97      0.83      0.90     44747
+           1       0.56      0.90      0.69     10442
+
+    accuracy                           0.85     55189
+   macro avg       0.76      0.87      0.79     55189
+weighted avg       0.89      0.85      0.86     55189
+
+[[9319 1813]
+ [ 285 2381]]
+              precision    recall  f1-score   support
+
+          -1       0.97      0.84      0.90     11132
+           1       0.57      0.89      0.69      2666
+
+    accuracy                           0.85     13798
+   macro avg       0.77      0.87      0.80     13798
+weighted avg       0.89      0.85      0.86     13798
+
+end time 2020-09-26 22:27:17.836654
+duration 74
+
+auto 250 ele = 1
+thres:  250
+original mice count:  58330
+original elephant count:  10657
+[[38771  7911]
+ [  854  7653]]
+              precision    recall  f1-score   support
+
+          -1       0.98      0.83      0.90     46682
+           1       0.49      0.90      0.64      8507
+
+    accuracy                           0.84     55189
+   macro avg       0.74      0.87      0.77     55189
+weighted avg       0.90      0.84      0.86     55189
+
+[[9696 1952]
+ [ 216 1934]]
+              precision    recall  f1-score   support
+
+          -1       0.98      0.83      0.90     11648
+           1       0.50      0.90      0.64      2150
+
+    accuracy                           0.84     13798
+   macro avg       0.74      0.87      0.77     13798
+weighted avg       0.90      0.84      0.86     13798
+
+end time 2020-09-26 22:30:57.819804
+duration 59
+
+scale 250 ele = 1
+thres:  250
+thres:  250
+original mice count:  58330
+original elephant count:  10657
+[[42296  4386]
+ [  842  7665]]
+              precision    recall  f1-score   support
+
+          -1       0.98      0.91      0.94     46682
+           1       0.64      0.90      0.75      8507
+
+    accuracy                           0.91     55189
+   macro avg       0.81      0.90      0.84     55189
+weighted avg       0.93      0.91      0.91     55189
+
+[[10570  1078]
+ [  229  1921]]
+              precision    recall  f1-score   support
+
+          -1       0.98      0.91      0.94     11648
+           1       0.64      0.89      0.75      2150
+
+    accuracy                           0.91     13798
+   macro avg       0.81      0.90      0.84     13798
+weighted avg       0.93      0.91      0.91     13798
+
+end time 2020-09-26 22:33:20.926202
+duration 60
+
+
+scale 200 ele = -1 to do
+thres:  200
+original mice count:  55879
+original elephant count:  13108
+[[10441     1]
+ [ 4478 40269]]
+              precision    recall  f1-score   support
+
+          -1       0.70      1.00      0.82     10442
+           1       1.00      0.90      0.95     44747
+
+    accuracy                           0.92     55189
+   macro avg       0.85      0.95      0.89     55189
+weighted avg       0.94      0.92      0.92     55189
+
+[[2665    1]
+ [1144 9988]]
+              precision    recall  f1-score   support
+
+          -1       0.70      1.00      0.82      2666
+           1       1.00      0.90      0.95     11132
+
+    accuracy                           0.92     13798
+   macro avg       0.85      0.95      0.88     13798
+weighted avg       0.94      0.92      0.92     13798
+
+end time 2020-09-26 22:33:53.160657
+duration 706
+
+auto 200 ele = -1 to do
+thres:  200
+thres:  200
+original mice count:  55879
+original elephant count:  13108
+[[10442     0]
+ [ 4477 40270]]
+              precision    recall  f1-score   support
+
+          -1       0.70      1.00      0.82     10442
+           1       1.00      0.90      0.95     44747
+
+    accuracy                           0.92     55189
+   macro avg       0.85      0.95      0.89     55189
+weighted avg       0.94      0.92      0.92     55189
+
+[[ 2666     0]
+ [ 1131 10001]]
+              precision    recall  f1-score   support
+
+          -1       0.70      1.00      0.83      2666
+           1       1.00      0.90      0.95     11132
+
+    accuracy                           0.92     13798
+   macro avg       0.85      0.95      0.89     13798
+weighted avg       0.94      0.92      0.92     13798
+
+end time 2020-09-27 13:07:29.824399
+duration 742
+
+
+auto 250 ele = -1
+thres:  250
+original mice count:  58330
+original elephant count:  10657
+[[ 8181   326]
+ [ 4666 42016]]
+              precision    recall  f1-score   support
+
+          -1       0.64      0.96      0.77      8507
+           1       0.99      0.90      0.94     46682
+
+    accuracy                           0.91     55189
+   macro avg       0.81      0.93      0.86     55189
+weighted avg       0.94      0.91      0.92     55189
+
+[[ 2080    70]
+ [ 1172 10476]]
+              precision    recall  f1-score   support
+
+          -1       0.64      0.97      0.77      2150
+           1       0.99      0.90      0.94     11648
+
+    accuracy                           0.91     13798
+   macro avg       0.82      0.93      0.86     13798
+weighted avg       0.94      0.91      0.92     13798
+
+scale 250 ele = -1
+thres:  250
+original mice count:  58330
+original elephant count:  10657
+[[ 8159   348]
+ [ 4666 42016]]
+              precision    recall  f1-score   support
+
+          -1       0.64      0.96      0.76      8507
+           1       0.99      0.90      0.94     46682
+
+    accuracy                           0.91     55189
+   macro avg       0.81      0.93      0.85     55189
+weighted avg       0.94      0.91      0.92     55189
+
+[[ 2071    79]
+ [ 1186 10462]]
+              precision    recall  f1-score   support
+
+          -1       0.64      0.96      0.77      2150
+           1       0.99      0.90      0.94     11648
+
+    accuracy                           0.91     13798
+   macro avg       0.81      0.93      0.85     13798
+weighted avg       0.94      0.91      0.92     13798
+
+end time 2020-09-27 13:05:23.115872
+duration 818
+
+0.01
+thres:  200
+original mice count:  55879
+original elephant count:  13108
+[[ 3223 41524]
+ [  173 10269]]
+              precision    recall  f1-score   support
+
+          -1       0.95      0.07      0.13     44747
+           1       0.20      0.98      0.33     10442
+
+    accuracy                           0.24     55189
+   macro avg       0.57      0.53      0.23     55189
+weighted avg       0.81      0.24      0.17     55189
+
+[[  794 10338]
+ [   67  2599]]
+              precision    recall  f1-score   support
+
+          -1       0.92      0.07      0.13     11132
+           1       0.20      0.97      0.33      2666
+
+    accuracy                           0.25     13798
+   macro avg       0.56      0.52      0.23     13798
+weighted avg       0.78      0.25      0.17     13798
+
+end time 2020-09-27 19:54:25.770500
+duration 24
+
+
+0.2
+thres:  200
+original mice count:  55879
+original elephant count:  13108
+[[42650  2097]
+ [ 2084  8358]]
+              precision    recall  f1-score   support
+
+          -1       0.95      0.95      0.95     44747
+           1       0.80      0.80      0.80     10442
+
+    accuracy                           0.92     55189
+   macro avg       0.88      0.88      0.88     55189
+weighted avg       0.92      0.92      0.92     55189
+
+[[10652   480]
+ [  587  2079]]
+              precision    recall  f1-score   support
+
+          -1       0.95      0.96      0.95     11132
+           1       0.81      0.78      0.80      2666
+
+    accuracy                           0.92     13798
+   macro avg       0.88      0.87      0.87     13798
+weighted avg       0.92      0.92      0.92     13798
+
+0.5
+thres:  200
+original mice count:  55879
+original elephant count:  13108
+[[44169   578]
+ [ 5224  5218]]
+              precision    recall  f1-score   support
+
+          -1       0.89      0.99      0.94     44747
+           1       0.90      0.50      0.64     10442
+
+    accuracy                           0.89     55189
+   macro avg       0.90      0.74      0.79     55189
+weighted avg       0.90      0.89      0.88     55189
+
+[[11007   125]
+ [ 1365  1301]]
+              precision    recall  f1-score   support
+
+          -1       0.89      0.99      0.94     11132
+           1       0.91      0.49      0.64      2666
+
+    accuracy                           0.89     13798
+   macro avg       0.90      0.74      0.79     13798
+weighted avg       0.89      0.89      0.88     13798
+
+end time 2020-09-27 19:56:38.825829
+duration 370
+
+0.8
+thres:  200
+original mice count:  55879
+original elephant count:  13108
+[[44747     0]
+ [ 8353  2089]]
+              precision    recall  f1-score   support
+
+          -1       0.84      1.00      0.91     44747
+           1       1.00      0.20      0.33     10442
+
+    accuracy                           0.85     55189
+   macro avg       0.92      0.60      0.62     55189
+weighted avg       0.87      0.85      0.80     55189
+
+[[11132     0]
+ [ 2110   556]]
+              precision    recall  f1-score   support
+
+          -1       0.84      1.00      0.91     11132
+           1       1.00      0.21      0.35      2666
+
+    accuracy                           0.85     13798
+   macro avg       0.92      0.60      0.63     13798
+weighted avg       0.87      0.85      0.80     13798
+
+end time 2020-09-27 20:00:17.263150
+duration 554

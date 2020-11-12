@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# @Author: Guanglin Duan
+# @Date:   2020-11-08 00:42:06
+# @Last Modified by:   Guanglin Duan
+# @Last Modified time: 2020-11-08 11:46:10
 import torch
 import torch.nn as nn
 from torch.autograd import Variable
@@ -12,14 +17,18 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from torch.utils.data import Dataset
 from sklearn.metrics import classification_report,confusion_matrix
+from datetime import datetime
+import sys
+import random
+ 
 
-model_path = "save_model/mice_train/Autoencoder_anomaly_adam_lr0001.pt"
-label_file = "data/dec-test.csv"
-data_file = "data/bin-test.csv"
-# label_file = "/data/sym/one-class-svm/data/mean_of_five/dec-feature/caida-A-50W-5-0.csv"
-# data_file = "/data/sym/one-class-svm/data/mean_of_five/bin-feature/caida-A-50W-5-0.csv"
+model_path = "save_model/AE/mice_train/Autoencoder_anomaly_adam_lr0001-{}.pt".format(random.randint(0,1000))
+# label_file = "data/dec-test.csv"
+# data_file = "data/bin-test.csv"
+label_file = "/data/sym/one-class-svm/data/mean_of_five/dec-feature/caida-A-50W-5-0.csv"
+data_file = "/data/sym/one-class-svm/data/mean_of_five/bin-feature/caida-A-50W-5-0.csv"
 # nodes = 387
-thresh = 500
+thresh = int(sys.argv[1])
 n_epochs = 50
 
 
@@ -30,23 +39,23 @@ class AutoEncoder(nn.Module):
 
         # 压缩
         self.encoder = nn.Sequential(
-            nn.Linear(387, 20),
-            # nn.ReLU(),
-            # nn.Linear(128, 20),
-            # nn.ReLU(),
-            # nn.Linear(64, 20),
+            nn.Linear(387, 256),
+            nn.ReLU(),
+            nn.Linear(256, 64),
+            nn.ReLU(),
+            nn.Linear(64, 20),
             # nn.ReLU(),
             # nn.Linear(12, 3),
         )
         # 解压
         self.decoder = nn.Sequential(
-            # nn.Linear(3, 12),
-            # nn.ReLU(),
             # nn.Linear(20, 64),
             # nn.ReLU(),
-            # nn.Linear(20, 128),
-            # nn.ReLU(),
-            nn.Linear(20, 387),
+            nn.Linear(20, 64),
+            nn.ReLU(),
+            nn.Linear(64, 256),
+            nn.ReLU(),
+            nn.Linear(256, 387),
             nn.Sigmoid(),       # 激励函数让输出值在 (0, 1)
         )
  
@@ -191,7 +200,7 @@ def detect_anomalies(unsupervised_images, decoded_outputs, y_test, quantile=0.8)
         mse = np.mean((inputing - outputing)**2)
         errors.append(mse)
     quantile = sum(y_test==0) / unsupervised_images.shape[0]
-    quantile = 0.72
+    # quantile = 0.72
     print("quantile", quantile)
     thresh = np.quantile(errors, quantile)
     idxs = np.where(np.array(errors) >= thresh)[0]
@@ -206,7 +215,11 @@ def detect_anomalies(unsupervised_images, decoded_outputs, y_test, quantile=0.8)
     print(c_matrix)
     print(classification_report(y_test, y_predict))
 
-def test_model():
+def test_model(num):
+    global label_file
+    global data_file
+    label_file = "/data/sym/one-class-svm/data/mean_of_five/dec-feature/caida-A-50W-5-{}.csv".format(num)
+    data_file = "/data/sym/one-class-svm/data/mean_of_five/bin-feature/caida-A-50W-5-{}.csv".format(num)
     path = model_path
     model = AutoEncoder()
     model.load_state_dict(torch.load(path))
@@ -232,7 +245,11 @@ def test_model():
     y_predict = detect_anomalies(total_data, decoded_outputs, y_test, quantile=0.9)
     
 
-def main():
+def main(num):
+    global label_file
+    global data_file
+    label_file = "/data/sym/one-class-svm/data/mean_of_five/dec-feature/caida-A-50W-5-{}.csv".format(num)
+    data_file = "/data/sym/one-class-svm/data/mean_of_five/bin-feature/caida-A-50W-5-{}.csv".format(num)
     autoencoder = AutoEncoder()
     use_cuda = torch.cuda.is_available()
     if use_cuda:
@@ -258,6 +275,20 @@ def test():
     load_data()
 
 if __name__ == "__main__":
-    main()
-    test_model()
+    a = datetime.now()
+    print("start time", a)
+
+    print("thres: ", thresh)
+    for i in range(10):
+        print("cycle:", i)
+        # mice_outliers(i)
+        main(i)
+        test_model(i)
+    
+    b = datetime.now()
+    print("end time", b)
+    durn = (b-a).seconds
+    print("duration", durn)
+
+    
     # test()

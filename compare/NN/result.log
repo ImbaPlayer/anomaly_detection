@@ -1,0 +1,193 @@
+下采样：
+thres:  500
+original mice count:  52334
+original elephant count:  16653
+13303 41886 3350 10448
+sampling: 13303 13303
+neural network:
+[[10250   198]
+ [   17  3333]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.98      0.99     10448
+           1       0.94      0.99      0.97      3350
+
+    accuracy                           0.98     13798
+   macro avg       0.97      0.99      0.98     13798
+weighted avg       0.99      0.98      0.98     13798
+
+random forest:
+[[10183   265]
+ [   11  3339]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.97      0.99     10448
+           1       0.93      1.00      0.96      3350
+
+    accuracy                           0.98     13798
+   macro avg       0.96      0.99      0.97     13798
+weighted avg       0.98      0.98      0.98     13798
+
+end time 2020-11-11 19:36:53.323759
+duration 115
+
+thres:  2000
+original mice count:  59826
+original elephant count:  9161
+7291 47898 1870 11928
+sampling: 7291 7291
+neural network:
+[[11569   359]
+ [   43  1827]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.97      0.98     11928
+           1       0.84      0.98      0.90      1870
+
+    accuracy                           0.97     13798
+   macro avg       0.92      0.97      0.94     13798
+weighted avg       0.97      0.97      0.97     13798
+
+random forest:
+[[11496   432]
+ [   39  1831]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.96      0.98     11928
+           1       0.81      0.98      0.89      1870
+
+    accuracy                           0.97     13798
+   macro avg       0.90      0.97      0.93     13798
+weighted avg       0.97      0.97      0.97     13798
+
+end time 2020-11-11 19:38:45.652107
+duration 80
+
+thres:  20000
+original mice count:  66641
+original elephant count:  2346
+1879 53310 467 13331
+sampling: 1879 1879
+neural network:
+[[12475   856]
+ [   15   452]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.94      0.97     13331
+           1       0.35      0.97      0.51       467
+
+    accuracy                           0.94     13798
+   macro avg       0.67      0.95      0.74     13798
+weighted avg       0.98      0.94      0.95     13798
+
+random forest:
+[[12414   917]
+ [    5   462]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.93      0.96     13331
+           1       0.34      0.99      0.50       467
+
+    accuracy                           0.93     13798
+   macro avg       0.67      0.96      0.73     13798
+weighted avg       0.98      0.93      0.95     13798
+
+end time 2020-11-11 19:39:30.702909
+duration 28
+
+不过采样或者下采样
+thres:  500
+original mice count:  52334
+original elephant count:  16653
+13303 41886 3350 10448
+sampling: 13303 41886
+neural network:
+[[10347   101]
+ [   76  3274]]
+              precision    recall  f1-score   support
+
+          -1       0.99      0.99      0.99     10448
+           1       0.97      0.98      0.97      3350
+
+    accuracy                           0.99     13798
+   macro avg       0.98      0.98      0.98     13798
+weighted avg       0.99      0.99      0.99     13798
+
+random forest:
+[[10347   101]
+ [   67  3283]]
+              precision    recall  f1-score   support
+
+          -1       0.99      0.99      0.99     10448
+           1       0.97      0.98      0.98      3350
+
+    accuracy                           0.99     13798
+   macro avg       0.98      0.99      0.98     13798
+weighted avg       0.99      0.99      0.99     13798
+
+end time 2020-11-11 19:50:14.496005
+duration 323
+
+thres:  2000
+original mice count:  59826
+original elephant count:  9161
+7291 47898 1870 11928
+sampling: 7291 47898
+neural network:
+[[11849    79]
+ [  136  1734]]
+              precision    recall  f1-score   support
+
+          -1       0.99      0.99      0.99     11928
+           1       0.96      0.93      0.94      1870
+
+    accuracy                           0.98     13798
+   macro avg       0.97      0.96      0.97     13798
+weighted avg       0.98      0.98      0.98     13798
+
+random forest:
+[[11876    52]
+ [  155  1715]]
+              precision    recall  f1-score   support
+
+          -1       0.99      1.00      0.99     11928
+           1       0.97      0.92      0.94      1870
+
+    accuracy                           0.98     13798
+   macro avg       0.98      0.96      0.97     13798
+weighted avg       0.98      0.98      0.98     13798
+
+end time 2020-11-11 20:12:22.147129
+duration 442
+
+thres:  20000
+original mice count:  66641
+original elephant count:  2346
+1879 53310 467 13331
+sampling: 1879 53310
+neural network:
+[[13193   138]
+ [  134   333]]
+              precision    recall  f1-score   support
+
+          -1       0.99      0.99      0.99     13331
+           1       0.71      0.71      0.71       467
+
+    accuracy                           0.98     13798
+   macro avg       0.85      0.85      0.85     13798
+weighted avg       0.98      0.98      0.98     13798
+
+random forest:
+[[13244    87]
+ [  167   300]]
+              precision    recall  f1-score   support
+
+          -1       0.99      0.99      0.99     13331
+           1       0.78      0.64      0.70       467
+
+    accuracy                           0.98     13798
+   macro avg       0.88      0.82      0.85     13798
+weighted avg       0.98      0.98      0.98     13798
+
+end time 2020-11-11 20:21:42.987768
+duration 450
