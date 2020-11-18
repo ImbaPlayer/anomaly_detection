@@ -1,0 +1,2477 @@
+unv1-50W
+500
+NN RandomForest
+cycle: 1
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  500
+original mice count:  20084
+original elephant count:  10078
+8088 16041 1990 4043
+sampling: 8088 8088
+neural network:
+[[4022   21]
+ [   8 1982]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.99      1.00      4043
+           1       0.99      1.00      0.99      1990
+
+    accuracy                           1.00      6033
+   macro avg       0.99      1.00      0.99      6033
+weighted avg       1.00      1.00      1.00      6033
+
+random forest:
+[[3987   56]
+ [   1 1989]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.99      0.99      4043
+           1       0.97      1.00      0.99      1990
+
+    accuracy                           0.99      6033
+   macro avg       0.99      0.99      0.99      6033
+weighted avg       0.99      0.99      0.99      6033
+
+cycle: 2
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  500
+original mice count:  22725
+original elephant count:  11113
+8870 18200 2243 4525
+sampling: 8870 8870
+neural network:
+[[4497   28]
+ [  15 2228]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.99      1.00      4525
+           1       0.99      0.99      0.99      2243
+
+    accuracy                           0.99      6768
+   macro avg       0.99      0.99      0.99      6768
+weighted avg       0.99      0.99      0.99      6768
+
+random forest:
+[[4462   63]
+ [   4 2239]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.99      0.99      4525
+           1       0.97      1.00      0.99      2243
+
+    accuracy                           0.99      6768
+   macro avg       0.99      0.99      0.99      6768
+weighted avg       0.99      0.99      0.99      6768
+
+cycle: 3
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  500
+original mice count:  23794
+original elephant count:  11105
+8829 19090 2276 4704
+sampling: 8829 8829
+neural network:
+[[4682   22]
+ [  13 2263]]
+              precision    recall  f1-score   support
+
+          -1       1.00      1.00      1.00      4704
+           1       0.99      0.99      0.99      2276
+
+    accuracy                           0.99      6980
+   macro avg       0.99      0.99      0.99      6980
+weighted avg       0.99      0.99      0.99      6980
+
+random forest:
+[[4654   50]
+ [   3 2273]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.99      0.99      4704
+           1       0.98      1.00      0.99      2276
+
+    accuracy                           0.99      6980
+   macro avg       0.99      0.99      0.99      6980
+weighted avg       0.99      0.99      0.99      6980
+
+cycle: 4
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  500
+original mice count:  27068
+original elephant count:  11456
+9196 21623 2260 5445
+sampling: 9196 9196
+neural network:
+[[5414   31]
+ [  13 2247]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.99      1.00      5445
+           1       0.99      0.99      0.99      2260
+
+    accuracy                           0.99      7705
+   macro avg       0.99      0.99      0.99      7705
+weighted avg       0.99      0.99      0.99      7705
+
+random forest:
+[[5390   55]
+ [   2 2258]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.99      0.99      5445
+           1       0.98      1.00      0.99      2260
+
+    accuracy                           0.99      7705
+   macro avg       0.99      0.99      0.99      7705
+weighted avg       0.99      0.99      0.99      7705
+
+cycle: 5
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  500
+original mice count:  19447
+original elephant count:  7134
+5680 15584 1454 3863
+sampling: 5680 5680
+neural network:
+[[3837   26]
+ [  12 1442]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.99      1.00      3863
+           1       0.98      0.99      0.99      1454
+
+    accuracy                           0.99      5317
+   macro avg       0.99      0.99      0.99      5317
+weighted avg       0.99      0.99      0.99      5317
+
+random forest:
+[[3810   53]
+ [   2 1452]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.99      0.99      3863
+           1       0.96      1.00      0.98      1454
+
+    accuracy                           0.99      5317
+   macro avg       0.98      0.99      0.99      5317
+weighted avg       0.99      0.99      0.99      5317
+
+cycle: 6
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  500
+original mice count:  20213
+original elephant count:  8606
+6863 16192 1743 4021
+sampling: 6863 6863
+neural network:
+[[3992   29]
+ [   5 1738]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.99      1.00      4021
+           1       0.98      1.00      0.99      1743
+
+    accuracy                           0.99      5764
+   macro avg       0.99      0.99      0.99      5764
+weighted avg       0.99      0.99      0.99      5764
+
+random forest:
+[[3967   54]
+ [   2 1741]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.99      0.99      4021
+           1       0.97      1.00      0.98      1743
+
+    accuracy                           0.99      5764
+   macro avg       0.98      0.99      0.99      5764
+weighted avg       0.99      0.99      0.99      5764
+
+cycle: 7
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  500
+original mice count:  16688
+original elephant count:  6940
+5499 13403 1441 3285
+sampling: 5499 5499
+neural network:
+[[3268   17]
+ [   9 1432]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.99      1.00      3285
+           1       0.99      0.99      0.99      1441
+
+    accuracy                           0.99      4726
+   macro avg       0.99      0.99      0.99      4726
+weighted avg       0.99      0.99      0.99      4726
+
+random forest:
+[[3247   38]
+ [   1 1440]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.99      0.99      3285
+           1       0.97      1.00      0.99      1441
+
+    accuracy                           0.99      4726
+   macro avg       0.99      0.99      0.99      4726
+weighted avg       0.99      0.99      0.99      4726
+
+cycle: 8
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  500
+original mice count:  24912
+original elephant count:  10181
+8153 19921 2028 4991
+sampling: 8153 8153
+neural network:
+[[4957   34]
+ [   0 2028]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.99      1.00      4991
+           1       0.98      1.00      0.99      2028
+
+    accuracy                           1.00      7019
+   macro avg       0.99      1.00      0.99      7019
+weighted avg       1.00      1.00      1.00      7019
+
+random forest:
+[[4937   54]
+ [   1 2027]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.99      0.99      4991
+           1       0.97      1.00      0.99      2028
+
+    accuracy                           0.99      7019
+   macro avg       0.99      0.99      0.99      7019
+weighted avg       0.99      0.99      0.99      7019
+
+cycle: 9
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  500
+original mice count:  11103
+original elephant count:  6289
+5050 8863 1239 2240
+sampling: 5050 5050
+neural network:
+[[2225   15]
+ [  19 1220]]
+              precision    recall  f1-score   support
+
+          -1       0.99      0.99      0.99      2240
+           1       0.99      0.98      0.99      1239
+
+    accuracy                           0.99      3479
+   macro avg       0.99      0.99      0.99      3479
+weighted avg       0.99      0.99      0.99      3479
+
+random forest:
+[[2200   40]
+ [   5 1234]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.98      0.99      2240
+           1       0.97      1.00      0.98      1239
+
+    accuracy                           0.99      3479
+   macro avg       0.98      0.99      0.99      3479
+weighted avg       0.99      0.99      0.99      3479
+
+end time 2020-11-14 23:35:26.407289
+duration 642
+
+2000
+thres:  2000
+original mice count:  25656
+original elephant count:  4506
+3598 20531 908 5125
+sampling: 3598 3598
+neural network:
+[[4824  301]
+ [  36  872]]
+              precision    recall  f1-score   support
+
+          -1       0.99      0.94      0.97      5125
+           1       0.74      0.96      0.84       908
+
+    accuracy                           0.94      6033
+   macro avg       0.87      0.95      0.90      6033
+weighted avg       0.96      0.94      0.95      6033
+
+random forest:
+[[4859  266]
+ [  34  874]]
+              precision    recall  f1-score   support
+
+          -1       0.99      0.95      0.97      5125
+           1       0.77      0.96      0.85       908
+
+    accuracy                           0.95      6033
+   macro avg       0.88      0.96      0.91      6033
+weighted avg       0.96      0.95      0.95      6033
+
+cycle: 2
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  2000
+original mice count:  28681
+original elephant count:  5157
+4073 22997 1084 5684
+sampling: 4073 4073
+neural network:
+[[5350  334]
+ [  47 1037]]
+              precision    recall  f1-score   support
+
+          -1       0.99      0.94      0.97      5684
+           1       0.76      0.96      0.84      1084
+
+    accuracy                           0.94      6768
+   macro avg       0.87      0.95      0.91      6768
+weighted avg       0.95      0.94      0.95      6768
+
+random forest:
+[[5389  295]
+ [  54 1030]]
+              precision    recall  f1-score   support
+
+          -1       0.99      0.95      0.97      5684
+           1       0.78      0.95      0.86      1084
+
+    accuracy                           0.95      6768
+   macro avg       0.88      0.95      0.91      6768
+weighted avg       0.96      0.95      0.95      6768
+
+cycle: 3
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  2000
+original mice count:  29846
+original elephant count:  5053
+4026 23893 1027 5953
+sampling: 4026 4026
+neural network:
+[[5641  312]
+ [  48  979]]
+              precision    recall  f1-score   support
+
+          -1       0.99      0.95      0.97      5953
+           1       0.76      0.95      0.84      1027
+
+    accuracy                           0.95      6980
+   macro avg       0.87      0.95      0.91      6980
+weighted avg       0.96      0.95      0.95      6980
+
+random forest:
+[[5664  289]
+ [  38  989]]
+              precision    recall  f1-score   support
+
+          -1       0.99      0.95      0.97      5953
+           1       0.77      0.96      0.86      1027
+
+    accuracy                           0.95      6980
+   macro avg       0.88      0.96      0.92      6980
+weighted avg       0.96      0.95      0.96      6980
+
+cycle: 4
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  2000
+original mice count:  33298
+original elephant count:  5226
+4200 26619 1026 6679
+sampling: 4200 4200
+neural network:
+[[6390  289]
+ [  39  987]]
+              precision    recall  f1-score   support
+
+          -1       0.99      0.96      0.97      6679
+           1       0.77      0.96      0.86      1026
+
+    accuracy                           0.96      7705
+   macro avg       0.88      0.96      0.92      7705
+weighted avg       0.96      0.96      0.96      7705
+
+random forest:
+[[6413  266]
+ [  36  990]]
+              precision    recall  f1-score   support
+
+          -1       0.99      0.96      0.98      6679
+           1       0.79      0.96      0.87      1026
+
+    accuracy                           0.96      7705
+   macro avg       0.89      0.96      0.92      7705
+weighted avg       0.97      0.96      0.96      7705
+
+cycle: 5
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  2000
+original mice count:  23051
+original elephant count:  3530
+2827 18437 703 4614
+sampling: 2827 2827
+neural network:
+[[4419  195]
+ [  21  682]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.96      0.98      4614
+           1       0.78      0.97      0.86       703
+
+    accuracy                           0.96      5317
+   macro avg       0.89      0.96      0.92      5317
+weighted avg       0.97      0.96      0.96      5317
+
+random forest:
+[[4404  210]
+ [  21  682]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.95      0.97      4614
+           1       0.76      0.97      0.86       703
+
+    accuracy                           0.96      5317
+   macro avg       0.88      0.96      0.91      5317
+weighted avg       0.96      0.96      0.96      5317
+
+cycle: 6
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  2000
+original mice count:  24810
+original elephant count:  4009
+3206 19849 803 4961
+sampling: 3206 3206
+neural network:
+[[4757  204]
+ [  36  767]]
+              precision    recall  f1-score   support
+
+          -1       0.99      0.96      0.98      4961
+           1       0.79      0.96      0.86       803
+
+    accuracy                           0.96      5764
+   macro avg       0.89      0.96      0.92      5764
+weighted avg       0.96      0.96      0.96      5764
+
+random forest:
+[[4688  273]
+ [  32  771]]
+              precision    recall  f1-score   support
+
+          -1       0.99      0.94      0.97      4961
+           1       0.74      0.96      0.83       803
+
+    accuracy                           0.95      5764
+   macro avg       0.87      0.95      0.90      5764
+weighted avg       0.96      0.95      0.95      5764
+
+cycle: 7
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  2000
+original mice count:  20184
+original elephant count:  3444
+2743 16159 701 4025
+sampling: 2743 2743
+neural network:
+[[3848  177]
+ [  42  659]]
+              precision    recall  f1-score   support
+
+          -1       0.99      0.96      0.97      4025
+           1       0.79      0.94      0.86       701
+
+    accuracy                           0.95      4726
+   macro avg       0.89      0.95      0.91      4726
+weighted avg       0.96      0.95      0.96      4726
+
+random forest:
+[[3807  218]
+ [  24  677]]
+              precision    recall  f1-score   support
+
+          -1       0.99      0.95      0.97      4025
+           1       0.76      0.97      0.85       701
+
+    accuracy                           0.95      4726
+   macro avg       0.88      0.96      0.91      4726
+weighted avg       0.96      0.95      0.95      4726
+
+cycle: 8
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  2000
+original mice count:  30505
+original elephant count:  4588
+3671 24403 917 6102
+sampling: 3671 3671
+neural network:
+[[5801  301]
+ [  35  882]]
+              precision    recall  f1-score   support
+
+          -1       0.99      0.95      0.97      6102
+           1       0.75      0.96      0.84       917
+
+    accuracy                           0.95      7019
+   macro avg       0.87      0.96      0.91      7019
+weighted avg       0.96      0.95      0.95      7019
+
+random forest:
+[[5819  283]
+ [  22  895]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.95      0.97      6102
+           1       0.76      0.98      0.85       917
+
+    accuracy                           0.96      7019
+   macro avg       0.88      0.96      0.91      7019
+weighted avg       0.97      0.96      0.96      7019
+
+cycle: 9
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  2000
+original mice count:  14707
+original elephant count:  2685
+2170 11743 515 2964
+sampling: 2170 2170
+neural network:
+[[2795  169]
+ [  22  493]]
+              precision    recall  f1-score   support
+
+          -1       0.99      0.94      0.97      2964
+           1       0.74      0.96      0.84       515
+
+    accuracy                           0.95      3479
+   macro avg       0.87      0.95      0.90      3479
+weighted avg       0.96      0.95      0.95      3479
+
+random forest:
+[[2819  145]
+ [  21  494]]
+              precision    recall  f1-score   support
+
+          -1       0.99      0.95      0.97      2964
+           1       0.77      0.96      0.86       515
+
+    accuracy                           0.95      3479
+   macro avg       0.88      0.96      0.91      3479
+weighted avg       0.96      0.95      0.95      3479
+
+end time 2020-11-14 23:52:28.529382
+duration 695
+
+20000
+
+cycle: 1
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  20000
+original mice count:  29145
+original elephant count:  1017
+812 23317 205 5828
+sampling: 812 812
+neural network:
+[[5341  487]
+ [  11  194]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.92      0.96      5828
+           1       0.28      0.95      0.44       205
+
+    accuracy                           0.92      6033
+   macro avg       0.64      0.93      0.70      6033
+weighted avg       0.97      0.92      0.94      6033
+
+random forest:
+[[5324  504]
+ [  10  195]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.91      0.95      5828
+           1       0.28      0.95      0.43       205
+
+    accuracy                           0.91      6033
+   macro avg       0.64      0.93      0.69      6033
+weighted avg       0.97      0.91      0.94      6033
+
+cycle: 2
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  20000
+original mice count:  32704
+original elephant count:  1134
+888 26182 246 6522
+sampling: 888 888
+neural network:
+[[6125  397]
+ [  28  218]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.94      0.97      6522
+           1       0.35      0.89      0.51       246
+
+    accuracy                           0.94      6768
+   macro avg       0.67      0.91      0.74      6768
+weighted avg       0.97      0.94      0.95      6768
+
+random forest:
+[[6015  507]
+ [   7  239]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.92      0.96      6522
+           1       0.32      0.97      0.48       246
+
+    accuracy                           0.92      6768
+   macro avg       0.66      0.95      0.72      6768
+weighted avg       0.97      0.92      0.94      6768
+
+cycle: 3
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  20000
+original mice count:  33787
+original elephant count:  1112
+893 27026 219 6761
+sampling: 893 893
+neural network:
+[[6203  558]
+ [  16  203]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.92      0.96      6761
+           1       0.27      0.93      0.41       219
+
+    accuracy                           0.92      6980
+   macro avg       0.63      0.92      0.69      6980
+weighted avg       0.97      0.92      0.94      6980
+
+random forest:
+[[6259  502]
+ [  12  207]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.93      0.96      6761
+           1       0.29      0.95      0.45       219
+
+    accuracy                           0.93      6980
+   macro avg       0.65      0.94      0.70      6980
+weighted avg       0.98      0.93      0.94      6980
+
+cycle: 4
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  20000
+original mice count:  37406
+original elephant count:  1118
+918 29901 200 7505
+sampling: 918 918
+neural network:
+[[6950  555]
+ [  13  187]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.93      0.96      7505
+           1       0.25      0.94      0.40       200
+
+    accuracy                           0.93      7705
+   macro avg       0.63      0.93      0.68      7705
+weighted avg       0.98      0.93      0.95      7705
+
+random forest:
+[[6955  550]
+ [  13  187]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.93      0.96      7505
+           1       0.25      0.94      0.40       200
+
+    accuracy                           0.93      7705
+   macro avg       0.63      0.93      0.68      7705
+weighted avg       0.98      0.93      0.95      7705
+
+cycle: 5
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  20000
+original mice count:  25897
+original elephant count:  684
+542 20722 142 5175
+sampling: 542 542
+neural network:
+[[4649  526]
+ [  15  127]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.90      0.95      5175
+           1       0.19      0.89      0.32       142
+
+    accuracy                           0.90      5317
+   macro avg       0.60      0.90      0.63      5317
+weighted avg       0.98      0.90      0.93      5317
+
+random forest:
+[[4608  567]
+ [   5  137]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.89      0.94      5175
+           1       0.19      0.96      0.32       142
+
+    accuracy                           0.89      5317
+   macro avg       0.60      0.93      0.63      5317
+weighted avg       0.98      0.89      0.93      5317
+
+cycle: 6
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  20000
+original mice count:  27971
+original elephant count:  848
+676 22379 172 5592
+sampling: 676 676
+neural network:
+[[5105  487]
+ [  11  161]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.91      0.95      5592
+           1       0.25      0.94      0.39       172
+
+    accuracy                           0.91      5764
+   macro avg       0.62      0.92      0.67      5764
+weighted avg       0.98      0.91      0.94      5764
+
+random forest:
+[[5088  504]
+ [   5  167]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.91      0.95      5592
+           1       0.25      0.97      0.40       172
+
+    accuracy                           0.91      5764
+   macro avg       0.62      0.94      0.67      5764
+weighted avg       0.98      0.91      0.94      5764
+
+cycle: 7
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  20000
+original mice count:  22856
+original elephant count:  772
+622 18280 150 4576
+sampling: 622 622
+neural network:
+[[4193  383]
+ [  10  140]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.92      0.96      4576
+           1       0.27      0.93      0.42       150
+
+    accuracy                           0.92      4726
+   macro avg       0.63      0.92      0.69      4726
+weighted avg       0.97      0.92      0.94      4726
+
+random forest:
+[[4217  359]
+ [   4  146]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.92      0.96      4576
+           1       0.29      0.97      0.45       150
+
+    accuracy                           0.92      4726
+   macro avg       0.64      0.95      0.70      4726
+weighted avg       0.98      0.92      0.94      4726
+
+cycle: 8
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  20000
+original mice count:  34099
+original elephant count:  994
+773 27301 221 6798
+sampling: 773 773
+neural network:
+[[6270  528]
+ [  12  209]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.92      0.96      6798
+           1       0.28      0.95      0.44       221
+
+    accuracy                           0.92      7019
+   macro avg       0.64      0.93      0.70      7019
+weighted avg       0.98      0.92      0.94      7019
+
+random forest:
+[[6286  512]
+ [   8  213]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.92      0.96      6798
+           1       0.29      0.96      0.45       221
+
+    accuracy                           0.93      7019
+   macro avg       0.65      0.94      0.71      7019
+weighted avg       0.98      0.93      0.94      7019
+
+cycle: 9
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  20000
+original mice count:  16856
+original elephant count:  536
+438 13475 98 3381
+sampling: 438 438
+neural network:
+[[3049  332]
+ [  17   81]]
+              precision    recall  f1-score   support
+
+          -1       0.99      0.90      0.95      3381
+           1       0.20      0.83      0.32        98
+
+    accuracy                           0.90      3479
+   macro avg       0.60      0.86      0.63      3479
+weighted avg       0.97      0.90      0.93      3479
+
+random forest:
+[[3094  287]
+ [   5   93]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.92      0.95      3381
+           1       0.24      0.95      0.39        98
+
+    accuracy                           0.92      3479
+   macro avg       0.62      0.93      0.67      3479
+weighted avg       0.98      0.92      0.94      3479
+
+end time 2020-11-14 23:59:11.850394
+duration 202
+
+100000
+cycle: 1
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  100000
+original mice count:  29831
+original elephant count:  331
+260 23869 71 5962
+sampling: 260 260
+neural network:
+[[5413  549]
+ [   7   64]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.91      0.95      5962
+           1       0.10      0.90      0.19        71
+
+    accuracy                           0.91      6033
+   macro avg       0.55      0.90      0.57      6033
+weighted avg       0.99      0.91      0.94      6033
+
+random forest:
+[[5378  584]
+ [   6   65]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.90      0.95      5962
+           1       0.10      0.92      0.18        71
+
+    accuracy                           0.90      6033
+   macro avg       0.55      0.91      0.56      6033
+weighted avg       0.99      0.90      0.94      6033
+
+cycle: 2
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  100000
+original mice count:  33507
+original elephant count:  331
+247 26823 84 6684
+sampling: 247 247
+neural network:
+[[5819  865]
+ [   8   76]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.87      0.93      6684
+           1       0.08      0.90      0.15        84
+
+    accuracy                           0.87      6768
+   macro avg       0.54      0.89      0.54      6768
+weighted avg       0.99      0.87      0.92      6768
+
+random forest:
+[[5939  745]
+ [   7   77]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.89      0.94      6684
+           1       0.09      0.92      0.17        84
+
+    accuracy                           0.89      6768
+   macro avg       0.55      0.90      0.56      6768
+weighted avg       0.99      0.89      0.93      6768
+
+cycle: 3
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  100000
+original mice count:  34613
+original elephant count:  286
+225 27694 61 6919
+sampling: 225 225
+neural network:
+[[6111  808]
+ [   5   56]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.88      0.94      6919
+           1       0.06      0.92      0.12        61
+
+    accuracy                           0.88      6980
+   macro avg       0.53      0.90      0.53      6980
+weighted avg       0.99      0.88      0.93      6980
+
+random forest:
+[[6255  664]
+ [   3   58]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.90      0.95      6919
+           1       0.08      0.95      0.15        61
+
+    accuracy                           0.90      6980
+   macro avg       0.54      0.93      0.55      6980
+weighted avg       0.99      0.90      0.94      6980
+
+cycle: 4
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  100000
+original mice count:  38188
+original elephant count:  336
+285 30534 51 7654
+sampling: 285 285
+neural network:
+[[6868  786]
+ [   4   47]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.90      0.95      7654
+           1       0.06      0.92      0.11        51
+
+    accuracy                           0.90      7705
+   macro avg       0.53      0.91      0.53      7705
+weighted avg       0.99      0.90      0.94      7705
+
+random forest:
+[[6844  810]
+ [   2   49]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.89      0.94      7654
+           1       0.06      0.96      0.11        51
+
+    accuracy                           0.89      7705
+   macro avg       0.53      0.93      0.53      7705
+weighted avg       0.99      0.89      0.94      7705
+
+cycle: 5
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  100000
+original mice count:  26371
+original elephant count:  210
+164 21100 46 5271
+sampling: 164 164
+neural network:
+[[4747  524]
+ [   2   44]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.90      0.95      5271
+           1       0.08      0.96      0.14        46
+
+    accuracy                           0.90      5317
+   macro avg       0.54      0.93      0.55      5317
+weighted avg       0.99      0.90      0.94      5317
+
+random forest:
+[[4805  466]
+ [   1   45]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.91      0.95      5271
+           1       0.09      0.98      0.16        46
+
+    accuracy                           0.91      5317
+   macro avg       0.54      0.94      0.56      5317
+weighted avg       0.99      0.91      0.95      5317
+
+cycle: 6
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  100000
+original mice count:  28548
+original elephant count:  271
+218 22837 53 5711
+sampling: 218 218
+neural network:
+[[5041  670]
+ [   2   51]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.88      0.94      5711
+           1       0.07      0.96      0.13        53
+
+    accuracy                           0.88      5764
+   macro avg       0.54      0.92      0.53      5764
+weighted avg       0.99      0.88      0.93      5764
+
+random forest:
+[[5261  450]
+ [   0   53]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.92      0.96      5711
+           1       0.11      1.00      0.19        53
+
+    accuracy                           0.92      5764
+   macro avg       0.55      0.96      0.57      5764
+weighted avg       0.99      0.92      0.95      5764
+
+cycle: 7
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  100000
+original mice count:  23386
+original elephant count:  242
+198 18704 44 4682
+sampling: 198 198
+neural network:
+[[4126  556]
+ [   6   38]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.88      0.94      4682
+           1       0.06      0.86      0.12        44
+
+    accuracy                           0.88      4726
+   macro avg       0.53      0.87      0.53      4726
+weighted avg       0.99      0.88      0.93      4726
+
+random forest:
+[[4209  473]
+ [   3   41]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.90      0.95      4682
+           1       0.08      0.93      0.15        44
+
+    accuracy                           0.90      4726
+   macro avg       0.54      0.92      0.55      4726
+weighted avg       0.99      0.90      0.94      4726
+
+cycle: 8
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  100000
+original mice count:  34772
+original elephant count:  321
+251 27823 70 6949
+sampling: 251 251
+neural network:
+[[6328  621]
+ [   4   66]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.91      0.95      6949
+           1       0.10      0.94      0.17        70
+
+    accuracy                           0.91      7019
+   macro avg       0.55      0.93      0.56      7019
+weighted avg       0.99      0.91      0.95      7019
+
+random forest:
+[[6332  617]
+ [   3   67]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.91      0.95      6949
+           1       0.10      0.96      0.18        70
+
+    accuracy                           0.91      7019
+   macro avg       0.55      0.93      0.57      7019
+weighted avg       0.99      0.91      0.95      7019
+
+cycle: 9
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  100000
+original mice count:  17223
+original elephant count:  169
+142 13771 27 3452
+sampling: 142 142
+neural network:
+[[3054  398]
+ [   3   24]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.88      0.94      3452
+           1       0.06      0.89      0.11        27
+
+    accuracy                           0.88      3479
+   macro avg       0.53      0.89      0.52      3479
+weighted avg       0.99      0.88      0.93      3479
+
+random forest:
+[[3084  368]
+ [   2   25]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.89      0.94      3452
+           1       0.06      0.93      0.12        27
+
+    accuracy                           0.89      3479
+   macro avg       0.53      0.91      0.53      3479
+weighted avg       0.99      0.89      0.94      3479
+
+end time 2020-11-15 00:10:50.726066
+duration 76
+
+200000
+cycle: 1
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  200000
+original mice count:  30005
+original elephant count:  157
+122 24007 35 5998
+sampling: 122 122
+neural network:
+[[5432  566]
+ [   8   27]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.91      0.95      5998
+           1       0.05      0.77      0.09        35
+
+    accuracy                           0.90      6033
+   macro avg       0.52      0.84      0.52      6033
+weighted avg       0.99      0.90      0.94      6033
+
+random forest:
+[[5456  542]
+ [   5   30]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.91      0.95      5998
+           1       0.05      0.86      0.10        35
+
+    accuracy                           0.91      6033
+   macro avg       0.53      0.88      0.53      6033
+weighted avg       0.99      0.91      0.95      6033
+
+cycle: 2
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  200000
+original mice count:  33687
+original elephant count:  151
+110 26960 41 6727
+sampling: 110 110
+neural network:
+[[6015  712]
+ [   4   37]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.89      0.94      6727
+           1       0.05      0.90      0.09        41
+
+    accuracy                           0.89      6768
+   macro avg       0.52      0.90      0.52      6768
+weighted avg       0.99      0.89      0.94      6768
+
+random forest:
+[[6142  585]
+ [   5   36]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.91      0.95      6727
+           1       0.06      0.88      0.11        41
+
+    accuracy                           0.91      6768
+   macro avg       0.53      0.90      0.53      6768
+weighted avg       0.99      0.91      0.95      6768
+
+cycle: 3
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  200000
+original mice count:  34773
+original elephant count:  126
+97 27822 29 6951
+sampling: 97 97
+neural network:
+[[6182  769]
+ [   4   25]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.89      0.94      6951
+           1       0.03      0.86      0.06        29
+
+    accuracy                           0.89      6980
+   macro avg       0.52      0.88      0.50      6980
+weighted avg       1.00      0.89      0.94      6980
+
+random forest:
+[[6255  696]
+ [   3   26]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.90      0.95      6951
+           1       0.04      0.90      0.07        29
+
+    accuracy                           0.90      6980
+   macro avg       0.52      0.90      0.51      6980
+weighted avg       1.00      0.90      0.94      6980
+
+cycle: 4
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  200000
+original mice count:  38375
+original elephant count:  149
+125 30694 24 7681
+sampling: 125 125
+neural network:
+[[7072  609]
+ [   3   21]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.92      0.96      7681
+           1       0.03      0.88      0.06        24
+
+    accuracy                           0.92      7705
+   macro avg       0.52      0.90      0.51      7705
+weighted avg       1.00      0.92      0.96      7705
+
+random forest:
+[[6980  701]
+ [   1   23]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.91      0.95      7681
+           1       0.03      0.96      0.06        24
+
+    accuracy                           0.91      7705
+   macro avg       0.52      0.93      0.51      7705
+weighted avg       1.00      0.91      0.95      7705
+
+cycle: 5
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  200000
+original mice count:  26485
+original elephant count:  96
+77 21187 19 5298
+sampling: 77 77
+neural network:
+[[4603  695]
+ [   0   19]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.87      0.93      5298
+           1       0.03      1.00      0.05        19
+
+    accuracy                           0.87      5317
+   macro avg       0.51      0.93      0.49      5317
+weighted avg       1.00      0.87      0.93      5317
+
+random forest:
+[[4610  688]
+ [   0   19]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.87      0.93      5298
+           1       0.03      1.00      0.05        19
+
+    accuracy                           0.87      5317
+   macro avg       0.51      0.94      0.49      5317
+weighted avg       1.00      0.87      0.93      5317
+
+cycle: 6
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  200000
+original mice count:  28690
+original elephant count:  129
+109 22946 20 5744
+sampling: 109 109
+neural network:
+[[5210  534]
+ [   1   19]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.91      0.95      5744
+           1       0.03      0.95      0.07        20
+
+    accuracy                           0.91      5764
+   macro avg       0.52      0.93      0.51      5764
+weighted avg       1.00      0.91      0.95      5764
+
+random forest:
+[[5197  547]
+ [   1   19]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.90      0.95      5744
+           1       0.03      0.95      0.06        20
+
+    accuracy                           0.90      5764
+   macro avg       0.52      0.93      0.51      5764
+weighted avg       1.00      0.90      0.95      5764
+
+cycle: 7
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  200000
+original mice count:  23531
+original elephant count:  97
+83 18819 14 4712
+sampling: 83 83
+neural network:
+[[4197  515]
+ [   1   13]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.89      0.94      4712
+           1       0.02      0.93      0.05        14
+
+    accuracy                           0.89      4726
+   macro avg       0.51      0.91      0.50      4726
+weighted avg       1.00      0.89      0.94      4726
+
+random forest:
+[[4196  516]
+ [   1   13]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.89      0.94      4712
+           1       0.02      0.93      0.05        14
+
+    accuracy                           0.89      4726
+   macro avg       0.51      0.91      0.49      4726
+weighted avg       1.00      0.89      0.94      4726
+
+cycle: 8
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  200000
+original mice count:  34947
+original elephant count:  146
+110 27964 36 6983
+sampling: 110 110
+neural network:
+[[6253  730]
+ [   3   33]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.90      0.94      6983
+           1       0.04      0.92      0.08        36
+
+    accuracy                           0.90      7019
+   macro avg       0.52      0.91      0.51      7019
+weighted avg       0.99      0.90      0.94      7019
+
+random forest:
+[[6103  880]
+ [   2   34]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.87      0.93      6983
+           1       0.04      0.94      0.07        36
+
+    accuracy                           0.87      7019
+   macro avg       0.52      0.91      0.50      7019
+weighted avg       0.99      0.87      0.93      7019
+
+cycle: 9
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  200000
+original mice count:  17309
+original elephant count:  83
+71 13842 12 3467
+sampling: 71 71
+neural network:
+[[3047  420]
+ [   2   10]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.88      0.94      3467
+           1       0.02      0.83      0.05        12
+
+    accuracy                           0.88      3479
+   macro avg       0.51      0.86      0.49      3479
+weighted avg       1.00      0.88      0.93      3479
+
+random forest:
+[[3164  303]
+ [   3    9]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.91      0.95      3467
+           1       0.03      0.75      0.06        12
+
+    accuracy                           0.91      3479
+   macro avg       0.51      0.83      0.50      3479
+weighted avg       1.00      0.91      0.95      3479
+
+end time 2020-11-15 00:12:15.530478
+duration 46
+
+300000
+cycle: 1
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  300000
+original mice count:  30081
+original elephant count:  81
+65 24064 16 6017
+sampling: 65 65
+neural network:
+[[5301  716]
+ [   1   15]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.88      0.94      6017
+           1       0.02      0.94      0.04        16
+
+    accuracy                           0.88      6033
+   macro avg       0.51      0.91      0.49      6033
+weighted avg       1.00      0.88      0.93      6033
+
+random forest:
+[[5378  639]
+ [   2   14]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.89      0.94      6017
+           1       0.02      0.88      0.04        16
+
+    accuracy                           0.89      6033
+   macro avg       0.51      0.88      0.49      6033
+weighted avg       1.00      0.89      0.94      6033
+
+cycle: 2
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  300000
+original mice count:  33756
+original elephant count:  82
+63 27007 19 6749
+sampling: 63 63
+neural network:
+[[6032  717]
+ [   3   16]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.89      0.94      6749
+           1       0.02      0.84      0.04        19
+
+    accuracy                           0.89      6768
+   macro avg       0.51      0.87      0.49      6768
+weighted avg       1.00      0.89      0.94      6768
+
+random forest:
+[[6160  589]
+ [   4   15]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.91      0.95      6749
+           1       0.02      0.79      0.05        19
+
+    accuracy                           0.91      6768
+   macro avg       0.51      0.85      0.50      6768
+weighted avg       1.00      0.91      0.95      6768
+
+cycle: 3
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  300000
+original mice count:  34819
+original elephant count:  80
+60 27859 20 6960
+sampling: 60 60
+neural network:
+[[5734 1226]
+ [   1   19]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.82      0.90      6960
+           1       0.02      0.95      0.03        20
+
+    accuracy                           0.82      6980
+   macro avg       0.51      0.89      0.47      6980
+weighted avg       1.00      0.82      0.90      6980
+
+random forest:
+[[5934 1026]
+ [   2   18]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.85      0.92      6960
+           1       0.02      0.90      0.03        20
+
+    accuracy                           0.85      6980
+   macro avg       0.51      0.88      0.48      6980
+weighted avg       1.00      0.85      0.92      6980
+
+cycle: 4
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  300000
+original mice count:  38439
+original elephant count:  85
+71 30748 14 7691
+sampling: 71 71
+neural network:
+[[7041  650]
+ [   1   13]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.92      0.96      7691
+           1       0.02      0.93      0.04        14
+
+    accuracy                           0.92      7705
+   macro avg       0.51      0.92      0.50      7705
+weighted avg       1.00      0.92      0.95      7705
+
+random forest:
+[[7009  682]
+ [   1   13]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.91      0.95      7691
+           1       0.02      0.93      0.04        14
+
+    accuracy                           0.91      7705
+   macro avg       0.51      0.92      0.50      7705
+weighted avg       1.00      0.91      0.95      7705
+
+cycle: 5
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  300000
+original mice count:  26509
+original elephant count:  72
+55 21209 17 5300
+sampling: 55 55
+neural network:
+[[4445  855]
+ [   1   16]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.84      0.91      5300
+           1       0.02      0.94      0.04        17
+
+    accuracy                           0.84      5317
+   macro avg       0.51      0.89      0.47      5317
+weighted avg       1.00      0.84      0.91      5317
+
+random forest:
+[[4549  751]
+ [   0   17]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.86      0.92      5300
+           1       0.02      1.00      0.04        17
+
+    accuracy                           0.86      5317
+   macro avg       0.51      0.93      0.48      5317
+weighted avg       1.00      0.86      0.92      5317
+
+cycle: 6
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  300000
+original mice count:  28751
+original elephant count:  68
+59 22996 9 5755
+sampling: 59 59
+neural network:
+[[5032  723]
+ [   0    9]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.87      0.93      5755
+           1       0.01      1.00      0.02         9
+
+    accuracy                           0.87      5764
+   macro avg       0.51      0.94      0.48      5764
+weighted avg       1.00      0.87      0.93      5764
+
+random forest:
+[[5103  652]
+ [   0    9]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.89      0.94      5755
+           1       0.01      1.00      0.03         9
+
+    accuracy                           0.89      5764
+   macro avg       0.51      0.94      0.48      5764
+weighted avg       1.00      0.89      0.94      5764
+
+cycle: 7
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  300000
+original mice count:  23570
+original elephant count:  58
+52 18850 6 4720
+sampling: 52 52
+neural network:
+[[4196  524]
+ [   1    5]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.89      0.94      4720
+           1       0.01      0.83      0.02         6
+
+    accuracy                           0.89      4726
+   macro avg       0.50      0.86      0.48      4726
+weighted avg       1.00      0.89      0.94      4726
+
+random forest:
+[[4215  505]
+ [   1    5]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.89      0.94      4720
+           1       0.01      0.83      0.02         6
+
+    accuracy                           0.89      4726
+   macro avg       0.50      0.86      0.48      4726
+weighted avg       1.00      0.89      0.94      4726
+
+cycle: 8
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  300000
+original mice count:  35006
+original elephant count:  87
+66 28008 21 6998
+sampling: 66 66
+neural network:
+[[6078  920]
+ [   3   18]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.87      0.93      6998
+           1       0.02      0.86      0.04        21
+
+    accuracy                           0.87      7019
+   macro avg       0.51      0.86      0.48      7019
+weighted avg       1.00      0.87      0.93      7019
+
+random forest:
+[[5943 1055]
+ [   1   20]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.85      0.92      6998
+           1       0.02      0.95      0.04        21
+
+    accuracy                           0.85      7019
+   macro avg       0.51      0.90      0.48      7019
+weighted avg       1.00      0.85      0.92      7019
+
+cycle: 9
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  300000
+original mice count:  17330
+original elephant count:  62
+52 13861 10 3469
+sampling: 52 52
+neural network:
+[[3025  444]
+ [   0   10]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.87      0.93      3469
+           1       0.02      1.00      0.04        10
+
+    accuracy                           0.87      3479
+   macro avg       0.51      0.94      0.49      3479
+weighted avg       1.00      0.87      0.93      3479
+
+random forest:
+[[3096  373]
+ [   0   10]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.89      0.94      3469
+           1       0.03      1.00      0.05        10
+
+    accuracy                           0.89      3479
+   macro avg       0.51      0.95      0.50      3479
+weighted avg       1.00      0.89      0.94      3479
+
+end time 2020-11-15 00:14:01.916279
+duration 29
+
+400000
+cycle: 1
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  400000
+original mice count:  30099
+original elephant count:  63
+51 24078 12 6021
+sampling: 51 51
+neural network:
+[[5294  727]
+ [   0   12]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.88      0.94      6021
+           1       0.02      1.00      0.03        12
+
+    accuracy                           0.88      6033
+   macro avg       0.51      0.94      0.48      6033
+weighted avg       1.00      0.88      0.93      6033
+
+random forest:
+[[5421  600]
+ [   0   12]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.90      0.95      6021
+           1       0.02      1.00      0.04        12
+
+    accuracy                           0.90      6033
+   macro avg       0.51      0.95      0.49      6033
+weighted avg       1.00      0.90      0.95      6033
+
+cycle: 2
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  400000
+original mice count:  33774
+original elephant count:  64
+53 27017 11 6757
+sampling: 53 53
+neural network:
+[[5974  783]
+ [   1   10]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.88      0.94      6757
+           1       0.01      0.91      0.02        11
+
+    accuracy                           0.88      6768
+   macro avg       0.51      0.90      0.48      6768
+weighted avg       1.00      0.88      0.94      6768
+
+random forest:
+[[5997  760]
+ [   2    9]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.89      0.94      6757
+           1       0.01      0.82      0.02        11
+
+    accuracy                           0.89      6768
+   macro avg       0.51      0.85      0.48      6768
+weighted avg       1.00      0.89      0.94      6768
+
+cycle: 3
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  400000
+original mice count:  34841
+original elephant count:  58
+43 27876 15 6965
+sampling: 43 43
+neural network:
+[[6202  763]
+ [   1   14]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.89      0.94      6965
+           1       0.02      0.93      0.04        15
+
+    accuracy                           0.89      6980
+   macro avg       0.51      0.91      0.49      6980
+weighted avg       1.00      0.89      0.94      6980
+
+random forest:
+[[6292  673]
+ [   2   13]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.90      0.95      6965
+           1       0.02      0.87      0.04        15
+
+    accuracy                           0.90      6980
+   macro avg       0.51      0.89      0.49      6980
+weighted avg       1.00      0.90      0.95      6980
+
+cycle: 4
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  400000
+original mice count:  38464
+original elephant count:  60
+49 30770 11 7694
+sampling: 49 49
+neural network:
+[[6700  994]
+ [   0   11]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.87      0.93      7694
+           1       0.01      1.00      0.02        11
+
+    accuracy                           0.87      7705
+   macro avg       0.51      0.94      0.48      7705
+weighted avg       1.00      0.87      0.93      7705
+
+random forest:
+[[6584 1110]
+ [   0   11]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.86      0.92      7694
+           1       0.01      1.00      0.02        11
+
+    accuracy                           0.86      7705
+   macro avg       0.50      0.93      0.47      7705
+weighted avg       1.00      0.86      0.92      7705
+
+cycle: 5
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  400000
+original mice count:  26528
+original elephant count:  53
+42 21222 11 5306
+sampling: 42 42
+neural network:
+[[4222 1084]
+ [   0   11]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.80      0.89      5306
+           1       0.01      1.00      0.02        11
+
+    accuracy                           0.80      5317
+   macro avg       0.51      0.90      0.45      5317
+weighted avg       1.00      0.80      0.88      5317
+
+random forest:
+[[4318  988]
+ [   0   11]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.81      0.90      5306
+           1       0.01      1.00      0.02        11
+
+    accuracy                           0.81      5317
+   macro avg       0.51      0.91      0.46      5317
+weighted avg       1.00      0.81      0.90      5317
+
+cycle: 6
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  400000
+original mice count:  28764
+original elephant count:  55
+47 23008 8 5756
+sampling: 47 47
+neural network:
+[[4766  990]
+ [   0    8]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.83      0.91      5756
+           1       0.01      1.00      0.02         8
+
+    accuracy                           0.83      5764
+   macro avg       0.50      0.91      0.46      5764
+weighted avg       1.00      0.83      0.90      5764
+
+random forest:
+[[4967  789]
+ [   0    8]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.86      0.93      5756
+           1       0.01      1.00      0.02         8
+
+    accuracy                           0.86      5764
+   macro avg       0.51      0.93      0.47      5764
+weighted avg       1.00      0.86      0.93      5764
+
+cycle: 7
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  400000
+original mice count:  23591
+original elephant count:  37
+33 18869 4 4722
+sampling: 33 33
+neural network:
+[[3773  949]
+ [   1    3]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.80      0.89      4722
+           1       0.00      0.75      0.01         4
+
+    accuracy                           0.80      4726
+   macro avg       0.50      0.77      0.45      4726
+weighted avg       1.00      0.80      0.89      4726
+
+random forest:
+[[3509 1213]
+ [   1    3]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.74      0.85      4722
+           1       0.00      0.75      0.00         4
+
+    accuracy                           0.74      4726
+   macro avg       0.50      0.75      0.43      4726
+weighted avg       1.00      0.74      0.85      4726
+
+cycle: 8
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  400000
+original mice count:  35024
+original elephant count:  69
+53 28021 16 7003
+sampling: 53 53
+neural network:
+[[6292  711]
+ [   3   13]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.90      0.95      7003
+           1       0.02      0.81      0.04        16
+
+    accuracy                           0.90      7019
+   macro avg       0.51      0.86      0.49      7019
+weighted avg       1.00      0.90      0.94      7019
+
+random forest:
+[[6020  983]
+ [   1   15]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.86      0.92      7003
+           1       0.02      0.94      0.03        16
+
+    accuracy                           0.86      7019
+   macro avg       0.51      0.90      0.48      7019
+weighted avg       1.00      0.86      0.92      7019
+
+cycle: 9
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  400000
+original mice count:  17342
+original elephant count:  50
+42 13871 8 3471
+sampling: 42 42
+neural network:
+[[2823  648]
+ [   0    8]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.81      0.90      3471
+           1       0.01      1.00      0.02         8
+
+    accuracy                           0.81      3479
+   macro avg       0.51      0.91      0.46      3479
+weighted avg       1.00      0.81      0.90      3479
+
+random forest:
+[[3045  426]
+ [   1    7]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.88      0.93      3471
+           1       0.02      0.88      0.03         8
+
+    accuracy                           0.88      3479
+   macro avg       0.51      0.88      0.48      3479
+weighted avg       1.00      0.88      0.93      3479
+
+end time 2020-11-15 00:15:28.252912
+duration 27
+
+500000
+cycle: 1
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  500000
+original mice count:  30108
+original elephant count:  54
+45 24084 9 6024
+sampling: 45 45
+neural network:
+[[5421  603]
+ [   0    9]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.90      0.95      6024
+           1       0.01      1.00      0.03         9
+
+    accuracy                           0.90      6033
+   macro avg       0.51      0.95      0.49      6033
+weighted avg       1.00      0.90      0.95      6033
+
+random forest:
+[[5536  488]
+ [   0    9]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.92      0.96      6024
+           1       0.02      1.00      0.04         9
+
+    accuracy                           0.92      6033
+   macro avg       0.51      0.96      0.50      6033
+weighted avg       1.00      0.92      0.96      6033
+
+cycle: 2
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  500000
+original mice count:  33785
+original elephant count:  53
+43 27027 10 6758
+sampling: 43 43
+neural network:
+[[6219  539]
+ [   3    7]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.92      0.96      6758
+           1       0.01      0.70      0.03        10
+
+    accuracy                           0.92      6768
+   macro avg       0.51      0.81      0.49      6768
+weighted avg       1.00      0.92      0.96      6768
+
+random forest:
+[[6341  417]
+ [   1    9]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.94      0.97      6758
+           1       0.02      0.90      0.04        10
+
+    accuracy                           0.94      6768
+   macro avg       0.51      0.92      0.50      6768
+weighted avg       1.00      0.94      0.97      6768
+
+cycle: 3
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  500000
+original mice count:  34856
+original elephant count:  43
+33 27886 10 6970
+sampling: 33 33
+neural network:
+[[6234  736]
+ [   2    8]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.89      0.94      6970
+           1       0.01      0.80      0.02        10
+
+    accuracy                           0.89      6980
+   macro avg       0.51      0.85      0.48      6980
+weighted avg       1.00      0.89      0.94      6980
+
+random forest:
+[[6492  478]
+ [   2    8]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.93      0.96      6970
+           1       0.02      0.80      0.03        10
+
+    accuracy                           0.93      6980
+   macro avg       0.51      0.87      0.50      6980
+weighted avg       1.00      0.93      0.96      6980
+
+cycle: 4
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  500000
+original mice count:  38474
+original elephant count:  50
+41 30778 9 7696
+sampling: 41 41
+neural network:
+[[6905  791]
+ [   0    9]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.90      0.95      7696
+           1       0.01      1.00      0.02         9
+
+    accuracy                           0.90      7705
+   macro avg       0.51      0.95      0.48      7705
+weighted avg       1.00      0.90      0.94      7705
+
+random forest:
+[[6764  932]
+ [   0    9]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.88      0.94      7696
+           1       0.01      1.00      0.02         9
+
+    accuracy                           0.88      7705
+   macro avg       0.50      0.94      0.48      7705
+weighted avg       1.00      0.88      0.93      7705
+
+cycle: 5
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  500000
+original mice count:  26539
+original elephant count:  42
+34 21230 8 5309
+sampling: 34 34
+neural network:
+[[4384  925]
+ [   0    8]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.83      0.90      5309
+           1       0.01      1.00      0.02         8
+
+    accuracy                           0.83      5317
+   macro avg       0.50      0.91      0.46      5317
+weighted avg       1.00      0.83      0.90      5317
+
+random forest:
+[[4476  833]
+ [   0    8]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.84      0.91      5309
+           1       0.01      1.00      0.02         8
+
+    accuracy                           0.84      5317
+   macro avg       0.50      0.92      0.47      5317
+weighted avg       1.00      0.84      0.91      5317
+
+cycle: 6
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  500000
+original mice count:  28767
+original elephant count:  52
+44 23011 8 5756
+sampling: 44 44
+neural network:
+[[4907  849]
+ [   0    8]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.85      0.92      5756
+           1       0.01      1.00      0.02         8
+
+    accuracy                           0.85      5764
+   macro avg       0.50      0.93      0.47      5764
+weighted avg       1.00      0.85      0.92      5764
+
+random forest:
+[[4949  807]
+ [   0    8]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.86      0.92      5756
+           1       0.01      1.00      0.02         8
+
+    accuracy                           0.86      5764
+   macro avg       0.50      0.93      0.47      5764
+weighted avg       1.00      0.86      0.92      5764
+
+cycle: 7
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  500000
+original mice count:  23595
+original elephant count:  33
+29 18873 4 4722
+sampling: 29 29
+neural network:
+[[4162  560]
+ [   1    3]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.88      0.94      4722
+           1       0.01      0.75      0.01         4
+
+    accuracy                           0.88      4726
+   macro avg       0.50      0.82      0.47      4726
+weighted avg       1.00      0.88      0.94      4726
+
+random forest:
+[[4168  554]
+ [   1    3]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.88      0.94      4722
+           1       0.01      0.75      0.01         4
+
+    accuracy                           0.88      4726
+   macro avg       0.50      0.82      0.47      4726
+weighted avg       1.00      0.88      0.94      4726
+
+cycle: 8
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  500000
+original mice count:  35045
+original elephant count:  48
+38 28036 10 7009
+sampling: 38 38
+neural network:
+[[5290 1719]
+ [   0   10]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.75      0.86      7009
+           1       0.01      1.00      0.01        10
+
+    accuracy                           0.76      7019
+   macro avg       0.50      0.88      0.44      7019
+weighted avg       1.00      0.76      0.86      7019
+
+random forest:
+[[4938 2071]
+ [   0   10]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.70      0.83      7009
+           1       0.00      1.00      0.01        10
+
+    accuracy                           0.70      7019
+   macro avg       0.50      0.85      0.42      7019
+weighted avg       1.00      0.70      0.83      7019
+
+cycle: 9
+MLPredict.py:29: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='0'] = -1
+MLPredict.py:30: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  X[X=='1'] = 1
+thres:  500000
+original mice count:  17349
+original elephant count:  43
+36 13877 7 3472
+sampling: 36 36
+neural network:
+[[2907  565]
+ [   2    5]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.84      0.91      3472
+           1       0.01      0.71      0.02         7
+
+    accuracy                           0.84      3479
+   macro avg       0.50      0.78      0.46      3479
+weighted avg       1.00      0.84      0.91      3479
+
+random forest:
+[[2946  526]
+ [   3    4]]
+              precision    recall  f1-score   support
+
+          -1       1.00      0.85      0.92      3472
+           1       0.01      0.57      0.01         7
+
+    accuracy                           0.85      3479
+   macro avg       0.50      0.71      0.47      3479
+weighted avg       1.00      0.85      0.92      3479
+
+end time 2020-11-15 00:16:27.090869
+duration 25

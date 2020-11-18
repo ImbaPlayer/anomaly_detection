@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# @Author: Guanglin Duan
+# @Date:   2020-11-14 22:01:44
+# @Last Modified by:   Guanglin Duan
+# @Last Modified time: 2020-11-14 22:01:46
 #!/usr/bin/env python3
 
 """pcap2csv
