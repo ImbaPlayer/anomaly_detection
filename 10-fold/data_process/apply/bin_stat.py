@@ -2,7 +2,7 @@
 # @Author: Guanglin Duan
 # @Date:   2020-11-16 19:09:10
 # @Last Modified by:   Guanglin Duan
-# @Last Modified time: 2020-11-18 19:47:48
+# @Last Modified time: 2020-11-18 20:34:01
 from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report,confusion_matrix

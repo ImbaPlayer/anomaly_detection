@@ -2,11 +2,8 @@
 # @Author: Guanglin Duan
 # @Date:   2020-11-03 17:09:05
 # @Last Modified by:   Guanglin Duan
-# @Last Modified time: 2020-11-16 19:37:46
+# @Last Modified time: 2020-11-19 10:33:22
 
-from pyod.models.auto_encoder import AutoEncoder
-from pyod.utils.data import generate_data
-from pyod.utils.data import evaluate_print
 from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report,confusion_matrix
@@ -55,7 +52,7 @@ def load_data(dataSetType, trainType, num):
     num = 0
     if trainType == "time":
         # user time interval as features
-        fileName1 = "/data/sym/anomaly_detection/data/10-fold/{}/packet-level{}-{}.csv".format(dataSetType, dataSetType, num)
+        fileName1 = "/data/sym/anomaly_detection/data/10-fold/{}/dec-time/{}-{}.csv".format(dataSetType, dataSetType, num)
         dfb = pd.read_csv(fileName1)
         yr = dfb['flowSize']
         
@@ -65,13 +62,13 @@ def load_data(dataSetType, trainType, num):
         X = dfb.values()
         
     else:
-        fileName1 = "data/dec-test.csv"
-        fileName2 = "data/bin-test.csv"
+        fileName1 = "/data/sym/anomaly_detection/data/10-fold/{}/dec-stat/{}-{}.csv".format(dataSetType, dataSetType, num)
+        fileName2 = "/data/sym/anomaly_detection/data/10-fold/{}/bin-stat/{}-{}.csv".format(dataSetType, dataSetType, num)
         df = pd.read_csv(fileName1)
         dfb = pd.read_csv(fileName2)
 
         # get specific cols
-        dfb = dfb.loc[:, get_col_names(trainType)]
+        # dfb = dfb.loc[:, get_col_names(trainType)]
         
         #conver to matrix
         X = dfb.values
@@ -83,6 +80,7 @@ def load_data(dataSetType, trainType, num):
         
     yc = yr.copy(deep=True)
     thres = get_thres(yr, elePercent)
+    print("thres: ", thres)
     yc[yr <= thres] = 1
     yc[yr > thres ] = -1
     print("original mice count: ", sum(yc==1))
@@ -90,7 +88,9 @@ def load_data(dataSetType, trainType, num):
     return X, yc
 def ele_outliers(num):
     dataSetType = ALL_DATA_TYPE[0]
-    trainType = ALL_TRAIN_TYPE[1]
+    trainType = ALL_TRAIN_TYPE[3]
+    print("dataset", dataSetType)
+    print("train type", trainType)
     
     X, yc = load_data(dataSetType, trainType, num)
 
@@ -143,7 +143,6 @@ if __name__ == '__main__':
     a = datetime.now()
     print("start time", a)
 
-    print("thres: ", thres)
     print("conta: ", conta)
     print("epoch: ", epochs)
     for i in range(1):
