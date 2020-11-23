@@ -16,7 +16,7 @@ ALL_DATA_TYPE = ["caida-A", "caida-B", "univ1"]
 def main(num):
     data_type = ALL_DATA_TYPE[0]
     fileName = "/data/sym/anomaly_detection/data/10-fold/{}/dec-size/{}-{}.csv".format(data_type, data_type, num)
-    saveName = "/data/sym/anomaly_detection/data/10-fold/{}/bin-size/{}-{}.csv".format(data_type, data_type, num)
+    saveName = "/data/sym/anomaly_detection/data/10-fold/{}/bin-5/{}-{}.csv".format(data_type, data_type, num)
     # fileName = "/data/sym/one-class-svm/data/mean_of_five/dec-feature/univ1-50W-{0}-{1}.csv".format(5, num)
     # saveName = "/data/sym/one-class-svm/data/mean_of_five/bin-feature/univ1-50W-{0}-{1}.csv".format(5, num)
     # fileName = "size-1.csv"

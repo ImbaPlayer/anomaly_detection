@@ -48,8 +48,8 @@ def main(num):
          #X_train = np.concatenate((X_train, X_train[mask]), axis=0)
          #y_train = np.concatenate((y_train, y_train[mask]), axis=0)
     smote = RandomUnderSampler(random_state=10)
-    X_train_sample, y_train_sample = smote.fit_sample(X_train, y_train)
-    # X_train_sample, y_train_sample = X_train, y_train
+    # X_train_sample, y_train_sample = smote.fit_sample(X_train, y_train)
+    X_train_sample, y_train_sample = X_train, y_train
     print(sum(y_train==1), sum(y_train==-1), sum(y_test==1), sum(y_test==-1))
     print("sampling:", sum(y_train_sample==1), sum(y_train_sample==-1))
     #neural network
@@ -62,18 +62,18 @@ def main(num):
     print(classification_report(y_test,predictions))
 
     #random forest
-    print("random forest:")
-    rf = RandomForestClassifier(n_estimators=30, class_weight={1:1,-1:1}, random_state=10)
-    rf = rf.fit(X_train_sample, y_train_sample)
-    predictions = rf.predict(X_test)
-    c_matrix = confusion_matrix(y_test, predictions)
-    print(c_matrix)
-    print(classification_report(y_test,predictions))
+    # print("random forest:")
+    # rf = RandomForestClassifier(n_estimators=30, class_weight={1:1,-1:1}, random_state=10)
+    # rf = rf.fit(X_train_sample, y_train_sample)
+    # predictions = rf.predict(X_test)
+    # c_matrix = confusion_matrix(y_test, predictions)
+    # print(c_matrix)
+    # print(classification_report(y_test,predictions))
 if __name__ == '__main__':
     a = datetime.now()
     print("start time", a)
 
-    for i in range(0, 10):
+    for i in range(1):
         print("cycle:", i)
         # mice_outliers(i)
         main(i)

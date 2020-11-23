@@ -71,9 +71,9 @@ def main(num):
     for col_name in statistic_names:
         temp_cols = [col_name + '-{}'.format(i) for i in range(32)]
         dfb_stat[temp_cols] = df[col_name].apply(getBits(32))
-    print(dfb.shape)
+    print(dfb_stat.shape)
     # save stat to file
-    dfb.to_csv(saveName_stat, index=False)
+    dfb_stat.to_csv(saveName_stat, index=False)
 if __name__ == '__main__':
     a = datetime.now()
     print("start time", a)
