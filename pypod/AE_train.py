@@ -2,7 +2,7 @@
 # @Author: Guanglin Duan
 # @Date:   2020-11-03 17:09:05
 # @Last Modified by:   Guanglin Duan
-# @Last Modified time: 2020-11-08 00:23:06
+# @Last Modified time: 2020-11-14 15:51:59
 
 from pyod.models.auto_encoder import AutoEncoder
 from pyod.utils.data import generate_data
@@ -25,10 +25,10 @@ epochs = 5
 
 def ele_outliers(num):
     # num = 10
-    # fileName1 = "/data/sym/one-class-svm/data/mean_of_five/dec-feature/caida-B-50W-5-{}.csv".format(num)
-    # fileName2 = "/data/sym/one-class-svm/data/mean_of_five/bin-feature/caida-B-50W-5-{}.csv".format(num)
-    fileName1 = "/data/sym/one-class-svm/data/mean_of_five/dec-feature/univ1-50W-{0}-{1}.csv".format(5, num)
-    fileName2 = "/data/sym/one-class-svm/data/mean_of_five/bin-feature/univ1-50W-{0}-{1}.csv".format(5, num)
+    fileName1 = "/data/sym/one-class-svm/data/mean_of_five/dec-feature/caida-A-50W-5-{}.csv".format(num)
+    fileName2 = "/data/sym/one-class-svm/data/mean_of_five/bin-feature/caida-A-50W-5-{}.csv".format(num)
+    # fileName1 = "/data/sym/one-class-svm/data/mean_of_five/dec-feature/univ1-50W-{0}-{1}.csv".format(5, num)
+    # fileName2 = "/data/sym/one-class-svm/data/mean_of_five/bin-feature/univ1-50W-{0}-{1}.csv".format(5, num)
     # fileName1 = "data/dec-test.csv"
     # fileName2 = "data/bin-test.csv"
     df = pd.read_csv(fileName1)
@@ -78,7 +78,7 @@ if __name__ == '__main__':
     print("thres: ", thres)
     print("conta: ", conta)
     print("epoch: ", epochs)
-    for i in range(1, 10):
+    for i in range(10):
         print("cycle:", i)
         # mice_outliers(i)
         ele_outliers(i)

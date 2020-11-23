@@ -2,7 +2,7 @@
 # @Author: Guanglin Duan
 # @Date:   2020-11-11 19:29:15
 # @Last Modified by:   Guanglin Duan
-# @Last Modified time: 2020-11-11 20:47:29
+# @Last Modified time: 2020-11-15 11:52:00
 from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report,confusion_matrix
@@ -19,6 +19,8 @@ from datetime import datetime
 def main(num):
     fileName1 = "/data/sym/one-class-svm/data/mean_of_five/dec-feature/caida-A-50W-5-{}.csv".format(num)
     fileName2 = "/data/sym/one-class-svm/data/mean_of_five/bin-feature/caida-A-50W-5-{}.csv".format(num)
+    # fileName1 = "/data/sym/one-class-svm/data/mean_of_five/dec-feature/univ1-50W-{0}-{1}.csv".format(5, num)
+    # fileName2 = "/data/sym/one-class-svm/data/mean_of_five/bin-feature/univ1-50W-{0}-{1}.csv".format(5, num)
     df = pd.read_csv(fileName1)
     dfb = pd.read_csv(fileName2)
     
@@ -45,9 +47,9 @@ def main(num):
          #mask = (y_train == 1)
          #X_train = np.concatenate((X_train, X_train[mask]), axis=0)
          #y_train = np.concatenate((y_train, y_train[mask]), axis=0)
-    # smote = RandomUnderSampler(random_state=10)
-    # X_train_sample, y_train_sample = smote.fit_sample(X_train, y_train)
-    X_train_sample, y_train_sample = X_train, y_train
+    smote = RandomUnderSampler(random_state=10)
+    X_train_sample, y_train_sample = smote.fit_sample(X_train, y_train)
+    # X_train_sample, y_train_sample = X_train, y_train
     print(sum(y_train==1), sum(y_train==-1), sum(y_test==1), sum(y_test==-1))
     print("sampling:", sum(y_train_sample==1), sum(y_train_sample==-1))
     #neural network
@@ -71,7 +73,7 @@ if __name__ == '__main__':
     a = datetime.now()
     print("start time", a)
 
-    for i in range(10):
+    for i in range(0, 10):
         print("cycle:", i)
         # mice_outliers(i)
         main(i)
