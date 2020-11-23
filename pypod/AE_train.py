@@ -60,7 +60,7 @@ def ele_outliers(num):
     # clf = IsolationForest(max_samples=0.2, n_estimators=300, contamination=conta, random_state=rng)
     # clf.fit(X_train_mice)
     clf_name = 'AutoEncoder'
-    clf = AutoEncoder(hidden_neurons=[256, 64, 20, 64, 256], epochs=epochs, contamination=conta, random_state=10)
+    clf = AutoEncoder(hidden_neurons=[256, 64, 20, 64, 256], epochs=epochs, contamination=conta, random_state=10, verbose=0)
     clf.fit(X_train_mice)
 
     y_pred_test = clf.predict(X_test)
