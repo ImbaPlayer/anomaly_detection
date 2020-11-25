@@ -22,8 +22,9 @@ import sys
 elePercent = float(sys.argv[1])
 rng = np.random.RandomState(10)
 PACKET_NUMBER = 10
-ALL_DATA_TYPE = ["caida-A", "caida-B", "univ1"]
+ALL_DATA_TYPE = ["caida-A", "caida-B", "univ1", "univ2"]
 ALL_TRAIN_TYPE = ["5-tuple", "time", "size", "stat"]
+server_name = "dgl"
 
 def get_thres(flowSize, elePercent):
     # param flowSize is DataFrame
@@ -47,8 +48,22 @@ def get_col_names(trainType):
     elif trainType == "5-tuple":
         col_names = ["srcIP", "srcPort", "dstIP", "dstPort", "protocol"]
     return col_names
+
+def get_file_name(trainType):
+    path1 = ""
+    path2 = ""
+    if trainType == "5-tuple":
+        path1 =  "/data/{}/anomaly_detection/data/10-fold/{}/dec-stat/{}-{}.csv"
+        path2 =  "/data/{}/anomaly_detection/data/10-fold/{}/bin-5/{}-{}.csv"
+    elif trainType == "size":
+        path1 =  "/data/{}/anomaly_detection/data/10-fold/{}/dec-size/{}-{}.csv"
+        path2 =  "/data/{}/anomaly_detection/data/10-fold/{}/bin-size/{}-{}.csv"
+    elif trainType == "stat":
+        path1 =  "/data/{}/anomaly_detection/data/10-fold/{}/dec-stat/{}-{}.csv"
+        path2 =  "/data/{}/anomaly_detection/data/10-fold/{}/bin-stat/{}-{}.csv"
+    return path1, path2
+
 def load_data(dataSetType, trainType, num):
-    num = 0
     if trainType == "time":
         # user time interval as features
         fileName1 = "/data/sym/anomaly_detection/data/10-fold/{}/dec-time/{}-{}.csv".format(dataSetType, dataSetType, num)
@@ -61,8 +76,9 @@ def load_data(dataSetType, trainType, num):
         X = dfb.values()
         
     else:
-        fileName1 = "/data/sym/anomaly_detection/data/10-fold/{}/dec-stat/{}-{}.csv".format(dataSetType, dataSetType, num)
-        fileName2 = "/data/sym/anomaly_detection/data/10-fold/{}/bin-5/{}-{}.csv".format(dataSetType, dataSetType, num)
+        path1, path2 = get_file_name(trainType)
+        fileName1 = path1.format(server_name, dataSetType, dataSetType, num)
+        fileName2 = path2.format(server_name, dataSetType, dataSetType, num)
         df = pd.read_csv(fileName1)
         dfb = pd.read_csv(fileName2)
 
@@ -134,7 +150,7 @@ def ele_outliers(num):
     print("final report random forest", final_report)
 def get_avg_report(report_list):
     report_array = np.array(report_list)
-    np.save('NN-5-1.npy', report_array)
+    # np.save('NN-5-1.npy', report_array)
 
     
     report_list_0 = []
@@ -150,12 +166,12 @@ def get_avg_report(report_list):
     result['-1'] = dict(df_0.mean())
     result['1'] = dict(df_1.mean())
     result["accuracy"] = np.mean(acc_list)
-    np.save("NN-5-2.npy", result)
+    # np.save("NN-5-2.npy", result)
     return result      
 if __name__ == '__main__':
     a = datetime.now()
     print("start time", a)
-
+    print("elePercent:", elePercent)
     for i in range(1):
         print("cycle:", i)
         # mice_outliers(i)
