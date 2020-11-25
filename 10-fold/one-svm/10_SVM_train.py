@@ -21,10 +21,10 @@ elePercent = float(sys.argv[1])
 nu = float(sys.argv[2])
 rng = np.random.RandomState(10)
 conta = 0.1
-epochs = 50
 PACKET_NUMBER = 10
 ALL_DATA_TYPE = ["caida-A", "caida-B", "univ1"]
 ALL_TRAIN_TYPE = ["5-tuple", "time", "size", "stat"]
+server_name = "dgl"
 
 def get_thres(flowSize, elePercent):
     # param flowSize is DataFrame
@@ -52,7 +52,7 @@ def load_data(dataSetType, trainType, num):
     num = 0
     if trainType == "time":
         # user time interval as features
-        fileName1 = "/data/sym/anomaly_detection/data/10-fold/{}/dec-time/{}-{}.csv".format(dataSetType, dataSetType, num)
+        fileName1 = "/data/{}/anomaly_detection/data/10-fold/{}/dec-time/{}-{}.csv".format(server_name, dataSetType, dataSetType, num)
         dfb = pd.read_csv(fileName1)
         yr = dfb['flowSize']
         
@@ -62,8 +62,8 @@ def load_data(dataSetType, trainType, num):
         X = dfb.values()
         
     else:
-        fileName1 = "/data/sym/anomaly_detection/data/10-fold/{}/dec-stat/{}-{}.csv".format(dataSetType, dataSetType, num)
-        fileName2 = "/data/sym/anomaly_detection/data/10-fold/{}/bin-stat/{}-{}.csv".format(dataSetType, dataSetType, num)
+        fileName1 = "/data/{}/anomaly_detection/data/10-fold/{}/dec-stat/{}-{}.csv".format(server_name, dataSetType, dataSetType, num)
+        fileName2 = "/data/{}/anomaly_detection/data/10-fold/{}/bin-5/{}-{}.csv".format(server_name, dataSetType, dataSetType, num)
         df = pd.read_csv(fileName1)
         dfb = pd.read_csv(fileName2)
 
@@ -122,7 +122,7 @@ def ele_outliers(num):
     print("final report", final_report)
 def get_avg_report(report_list):
     report_array = np.array(report_list)
-    np.save('a.npy', report_array)
+    np.save('OCS-5-1.npy', report_array)
     
     report_list_0 = []
     report_list_1 = []
@@ -137,14 +137,13 @@ def get_avg_report(report_list):
     result['-1'] = dict(df_0.mean())
     result['1'] = dict(df_1.mean())
     result["accuracy"] = np.mean(acc_list)
-    np.save("b.npy", result)
+    np.save("OCS-5-2.npy", result)
     return result      
 if __name__ == '__main__':
     a = datetime.now()
     print("start time", a)
 
     print("conta: ", conta)
-    print("epoch: ", epochs)
     for i in range(1):
         print("cycle:", i)
         # mice_outliers(i)
