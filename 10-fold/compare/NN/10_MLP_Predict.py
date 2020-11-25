@@ -2,7 +2,7 @@
 # @Author: Guanglin Duan
 # @Date:   2020-11-03 17:09:05
 # @Last Modified by:   Guanglin Duan
-# @Last Modified time: 2020-11-22 11:09:59
+# @Last Modified time: 2020-11-24 15:44:42
 
 from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import train_test_split
