@@ -2,7 +2,7 @@
 # @Author: Guanglin Duan
 # @Date:   2020-11-14 22:02:33
 # @Last Modified by:   Guanglin Duan
-# @Last Modified time: 2020-11-24 23:32:10
+# @Last Modified time: 2020-11-16 16:43:08
 #!/usr/bin/env python3
 
 """pcap2csv
@@ -38,15 +38,15 @@ def render_csv_row(timeInfo, pkt_sc, fh_csv):
     scapy's RawPcapReader
     fh_csv is the csv file handle
     """
-    ether_pkt_sc = Ether(pkt_sc)
-    if ether_pkt_sc is None:
-        return False
+    # ether_pkt_sc = Ether(pkt_sc)
+    # if ether_pkt_sc is None:
+    #     return False
 
-    if not ether_pkt_sc.haslayer(IP):
-        return False
-    ip_pkt_sc = ether_pkt_sc[IP]       # <<<< Assuming Ethernet + IPv4 here
+    # if not ether_pkt_sc.haslayer(IP):
+    #     return False
+    # ip_pkt_sc = ether_pkt_sc[IP]       # <<<< Assuming Ethernet + IPv4 here
     
-    # ip_pkt_sc = IP(pkt_sc)
+    ip_pkt_sc = IP(pkt_sc)
     if ip_pkt_sc.version != 4:
         return False
     proto = ip_pkt_sc.fields['proto']
@@ -118,8 +118,8 @@ def pcap2csv(in_pcap, out_csv):
                         ignored_packets += 1
                     if frame_num % 100000 == 0:
                         print(frame_num)
-                    # if frame_num >= 500000:
-                    #     break
+                    if frame_num >= 5:
+                        break
             except StopIteration:
                 # Shouldn't happen because the RawPcapReader iterator should also
                 # exit before this happens.
@@ -163,21 +163,14 @@ def main():
     #         load_path = "/data/xgr/sketch_data/caida_dirB/equinix-nyc.dirB.20190117-13{}00.UTC.anon.pcap".format(i)
     #     save_path = "/data/sym/anomaly_detection/data/10-fold/caida-B/packet-level/caida-B-{}.csv".format(i)
     #     pcap2csv(load_path, save_path)
-    # caida
-    # for i in range(6, 60):
-    #     if i < 10:
-    #         load_path = "/data/xgr/sketch_data/caida_dirA/equinix-nyc.dirA.20190117-130{}00.UTC.anon.pcap".format(i)
-    #     else:
-    #         load_path = "/data/xgr/sketch_data/caida_dirA/equinix-nyc.dirA.20190117-13{}00.UTC.anon.pcap".format(i)
-    #     save_path = "/data/sym/anomaly_detection/data/10-fold/caida-A/packet-level/caida-A-{}.csv".format(i)
-    #     pcap2csv(load_path, save_path)
-    # univ1
-    for i in range(9):
-        load_path = "/data/xgr/sketch_data/imc_univ2/univ2_pt{}".format(i)
-        save_path = "/data/sym/anomaly_detection/data/10-fold/univ2/packet-level/univ2-{}.csv".format(i)
+    for i in range(1):
+        if i < 10:
+            # load_path = "/data/xgr/sketch_data/caida_dirA/equinix-nyc.dirA.20190117-130{}00.UTC.anon.pcap".format(i)
+            load_path = "H:\exp_data\pcap_data\caida-50w-1.pcap"
+        else:
+            load_path = "/data/xgr/sketch_data/caida_dirA/equinix-nyc.dirA.20190117-13{}00.UTC.anon.pcap".format(i)
+        save_path = "test-{}.csv".format(i)
         pcap2csv(load_path, save_path)
-        print("finish", i)
-
 
     # pcap2csv(args.pcap, args.csv)
 #--------------------------------------------------
@@ -192,7 +185,6 @@ if __name__ == '__main__':
     print("end time", b)
     durn = (b-a).seconds
     print("duration", durn)
-    
 
 # python pcap2csv.py --pcap H:\exp_data\pcap_data\caida-50w-1.pcap --csv original.csv
 # python pcap2csv.py --pcap H:\exp_data\pcap_data\univ1_all.pcap --csv original-univ1.csv

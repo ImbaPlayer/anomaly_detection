@@ -1,0 +1,42 @@
+songyima@155:~$ tmux attach -t pcap2csv
+python 10_MLP_Predict.py 0.2
+[[178298  30445]
+ [  3648  48358]]
+              precision    recall  f1-score   support
+
+          -1       0.98      0.85      0.91    208743
+           1       0.61      0.93      0.74     52006
+
+    accuracy                           0.87    260749
+   macro avg       0.80      0.89      0.83    260749
+weighted avg       0.91      0.87      0.88    260749
+
+final report nn {'-1': {'precision': 0.9822933575029026, 'recall': 0.8302636194371292, 'f1-score': 0.8998925619561605, 'support': 208642.8}, '1': {'precision': 0.580457445335882, 'recall': 0.9400456494841685, 'f1-score': 0.7176975618651747, 'support': 52106.8}, 'accuracy': 0.852201882757492}
+final report random forest {'-1': {'precision': 0.9804009641210948, 'recall': 0.8538097309168234, 'f1-score': 0.9127366476099, 'support': 208642.8}, '1': {'precision': 0.6141346824477028, 'recall': 0.9316571160364472, 'f1-score': 0.7402830345880986, 'support': 52106.8}, 'accuracy': 0.8693662429568493}
+end time 2020-11-23 21:29:33.153429
+duration 17296
+
+
+songyima@155:~$ tmux attach -t pcap2csv
+[[178298  30445]
+ [  3648  48358]]
+              precision    recall  f1-score   support
+
+          -1       0.98      0.85      0.91    208743
+           1       0.61      0.93      0.74     52006
+
+    accuracy                           0.87    260749
+   macro avg       0.80      0.89      0.83    260749
+weighted avg       0.91      0.87      0.88    260749
+
+final report nn {'-1': {'precision': 0.9822933575029026, 'recall': 0.8302636194371292, 'f1-score': 0.8998925619561605, 'support': 208642.8}, '1': {'precision': 0.580457445335882, 'recall': 0.9400456494841685, 'f1-score': 0.7176975618651747, 'support': 52106.8}, 'accuracy': 0.852201882757492}
+final report random forest {'-1': {'precision': 0.9804009641210948, 'recall': 0.8538097309168234, 'f1-score': 0.9127366476099, 'support': 208642.8}, '1': {'precision': 0.6141346824477028, 'recall': 0.9316571160364472, 'f1-score': 0.7402830345880986, 'support': 52106.8}, 'accuracy': 0.8693662429568493}
+end time 2020-11-23 22:09:31.093329
+duration 39476
+
+(dgl) songyima@155:/data/sym/anomaly_detection/10-fold/data_process/apply$ python bin_size.py
+start time 2020-11-22 16:12:34.242928
+(2607496, 320)
+finish 0
+end time 2020-11-23 03:41:39.271696
+duration 41345

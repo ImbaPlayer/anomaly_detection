@@ -7,6 +7,8 @@
 from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report,confusion_matrix
+from imblearn.over_sampling import SMOTE, ADASYN
+from imblearn.under_sampling import RandomUnderSampler
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.ensemble import IsolationForest
 from sklearn import svm
@@ -100,6 +102,10 @@ def ele_outliers(num):
     for train_index, test_index in KF.split(X):
         X_train, X_test = X[train_index], X[test_index]
         y_train, y_test = yc[train_index], yc[test_index]
+
+        # undersample
+        smote = RandomUnderSampler(random_state=10)
+        X_train, y_train = smote.fit_sample(X_train, y_train)
 
         # split into train and test
         # X_train, X_test, y_train, y_test = train_test_split(X, yc, test_size=0.2, random_state=10)

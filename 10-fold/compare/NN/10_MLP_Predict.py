@@ -2,11 +2,8 @@
 # @Author: Guanglin Duan
 # @Date:   2020-11-03 17:09:05
 # @Last Modified by:   Guanglin Duan
-# @Last Modified time: 2020-11-19 10:17:10
+# @Last Modified time: 2020-11-24 15:44:42
 
-from pyod.models.auto_encoder import AutoEncoder
-from pyod.utils.data import generate_data
-from pyod.utils.data import evaluate_print
 from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report,confusion_matrix
@@ -23,10 +20,7 @@ import sys
 
 # thres = int(sys.argv[1])
 elePercent = float(sys.argv[1])
-nu = float(sys.argv[2])
 rng = np.random.RandomState(10)
-conta = 0.1
-epochs = 50
 PACKET_NUMBER = 10
 ALL_DATA_TYPE = ["caida-A", "caida-B", "univ1"]
 ALL_TRAIN_TYPE = ["5-tuple", "time", "size", "stat"]
@@ -93,7 +87,7 @@ def load_data(dataSetType, trainType, num):
     return X, yc
 def ele_outliers(num):
     dataSetType = ALL_DATA_TYPE[0]
-    trainType = ALL_TRAIN_TYPE[1]
+    trainType = ALL_TRAIN_TYPE[3]
     
     X, yc = load_data(dataSetType, trainType, num)
 
@@ -141,6 +135,7 @@ def ele_outliers(num):
 def get_avg_report(report_list):
     report_array = np.array(report_list)
     np.save('NN-5-1.npy', report_array)
+
     
     report_list_0 = []
     report_list_1 = []
@@ -161,8 +156,6 @@ if __name__ == '__main__':
     a = datetime.now()
     print("start time", a)
 
-    print("conta: ", conta)
-    print("epoch: ", epochs)
     for i in range(1):
         print("cycle:", i)
         # mice_outliers(i)

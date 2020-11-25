@@ -2,7 +2,7 @@
 # @Author: Guanglin Duan
 # @Date:   2020-11-16 19:00:38
 # @Last Modified by:   Guanglin Duan
-# @Last Modified time: 2020-11-18 19:35:42
+# @Last Modified time: 2020-11-24 21:55:20
 import pandas as pd
 from datetime import datetime
 import numpy as np
@@ -23,7 +23,7 @@ def get_exact_length(index, packets):
     return result[index]
 
 def new_extract(num):
-    data_type = ALL_DATA_TYPE[0]
+    data_type = ALL_DATA_TYPE[2]
     inputName = "/data/sym/anomaly_detection/data/10-fold/{}/packet-level/{}-{}.csv".format(data_type, data_type, num)
     saveName = "/data/sym/anomaly_detection/data/10-fold/{}/dec-size/{}-{}.csv".format(data_type, data_type, num)
 
@@ -53,7 +53,7 @@ def new_extract(num):
 if __name__ == '__main__':
     a = datetime.now()
     print("start time", a)
-    for i in range(1):
+    for i in range(1,21):
         new_extract(i)
         print("finish", i)
     b = datetime.now()

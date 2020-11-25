@@ -2,7 +2,7 @@
 # @Author: Guanglin Duan
 # @Date:   2020-11-16 19:00:38
 # @Last Modified by:   Guanglin Duan
-# @Last Modified time: 2020-11-18 19:36:02
+# @Last Modified time: 2020-11-25 00:31:32
 import pandas as pd
 from datetime import datetime
 import numpy as np
@@ -17,7 +17,7 @@ def my_process(x):
     return x.var(ddof=0)
 
 def new_extract(num):
-    data_type = ALL_DATA_TYPE[0]
+    data_type = ALL_DATA_TYPE[2]
     inputName = "/data/sym/anomaly_detection/data/10-fold/{}/packet-level/{}-{}.csv".format(data_type, data_type, num)
     saveName = "/data/sym/anomaly_detection/data/10-fold/{}/dec-stat/{}-{}.csv".format(data_type, data_type, num)
     #指定分隔符为/t
@@ -58,7 +58,7 @@ def new_extract(num):
 if __name__ == '__main__':
     a = datetime.now()
     print("start time", a)
-    for i in range(1):
+    for i in range(1, 21):
         new_extract(i)
         print("finish", i)
     b = datetime.now()
