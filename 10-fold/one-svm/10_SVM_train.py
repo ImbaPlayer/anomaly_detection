@@ -74,9 +74,9 @@ def load_data(dataSetType, trainType, num):
         yr = dfb['flowSize']
         
         # drop flowSize
-        dfb = dfb.drop(["flowSize"], axis=1)
+        dfb = dfb.drop(["time","srcIP","srcPort","dstIP","dstPort","protocol","flowSize"], axis=1)
         # convert to matrix
-        X = dfb.values()
+        X = dfb.values
         
     else:
         path1, path2 = get_file_name(trainType)

@@ -5,9 +5,11 @@
 # @Last Modified time: 2020-11-15 19:18:33
 
 import numpy as np
+import sys
 
 def process_svm():
-    filename = "temp.log"
+    filename = sys.argv[1]
+    print("file", filename)
     nn_mice = []
     nn_ele = []
     with open(filename) as file_object:

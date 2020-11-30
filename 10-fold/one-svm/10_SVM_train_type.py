@@ -2,16 +2,16 @@
 # @Author: Guanglin Duan
 # @Date:   2020-11-03 17:09:05
 # @Last Modified by:   Guanglin Duan
-# @Last Modified time: 2020-11-24 15:44:42
+# @Last Modified time: 2020-11-19 10:33:22
 
 from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report,confusion_matrix
+# from imblearn.over_sampling import SMOTE, ADASYN
+from imblearn.under_sampling import RandomUnderSampler
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.ensemble import IsolationForest
-from imblearn.over_sampling import SMOTE, ADASYN
-from imblearn.under_sampling import RandomUnderSampler
-from imblearn.combine import SMOTEENN, SMOTETomek
+from sklearn import svm
 from sklearn.model_selection import KFold
 from datetime import datetime
 import pandas as pd
@@ -20,8 +20,10 @@ import sys
 
 # thres = int(sys.argv[1])
 elePercent = float(sys.argv[1])
-train_type_num = int(sys.argv[2])
+nu = float(sys.argv[2])
+train_type_num = int(sys.argv[3])
 rng = np.random.RandomState(10)
+conta = 0.1
 PACKET_NUMBER = 10
 ALL_DATA_TYPE = ["caida-A", "caida-B", "univ1", "univ2"]
 ALL_TRAIN_TYPE = ["5-tuple", "time", "size", "stat"]
@@ -51,7 +53,6 @@ def get_col_names(trainType):
     elif trainType == "5-tuple":
         col_names = ["srcIP", "srcPort", "dstIP", "dstPort", "protocol"]
     return col_names
-
 def get_file_name(trainType):
     path1 = ""
     path2 = ""
@@ -99,63 +100,51 @@ def load_data(dataSetType, trainType, num):
     yc = yr.copy(deep=True)
     thres = get_thres(yr, elePercent)
     print("thres: ", thres)
-    yc[yr <= thres] = -1
-    yc[yr > thres ] = 1
-    print("original mice count: ", sum(yc==-1))
-    print("original elephant count: ", sum(yc==1))
+    yc[yr <= thres] = 1
+    yc[yr > thres ] = -1
+    print("original mice count: ", sum(yc==1))
+    print("original elephant count: ", sum(yc==-1))
     return X, yc
 def ele_outliers(num):
     
+    print("dataset", dataSetType)
+    print("train type", trainType)
     
     X, yc = load_data(dataSetType, trainType, num)
 
     # 10 fold validation
     KF = KFold(n_splits=10, shuffle=True, random_state=10)
-    report_list_nn = []
-    report_list_forest = []
-    
+    report_list = []
     for train_index, test_index in KF.split(X):
         X_train, X_test = X[train_index], X[test_index]
         y_train, y_test = yc[train_index], yc[test_index]
 
         # undersample
         # smote = RandomUnderSampler(random_state=10)
-        # X_train_sample, y_train_sample = smote.fit_sample(X_train, y_train)
-        X_train_sample, y_train_sample = X_train, y_train
+        # X_train, y_train = smote.fit_sample(X_train, y_train)
 
-        print(sum(y_train==1), sum(y_train==-1), sum(y_test==1), sum(y_test==-1))
-        print("sampling:", sum(y_train_sample==1), sum(y_train_sample==-1))
-        #neural network
-        # print("neural network:")
-        mlp = MLPClassifier(hidden_layer_sizes=(100, 40), activation='tanh', max_iter=400, random_state=10)
-        mlp.fit(X_train_sample, y_train_sample)
-        predictions = mlp.predict(X_test)
-        c_matrix = confusion_matrix(y_test, predictions)
+        # split into train and test
+        # X_train, X_test, y_train, y_test = train_test_split(X, yc, test_size=0.2, random_state=10)
+        # split train to ele and mice
+        X_train_ele = X_train[y_train == -1]
+        X_train_mice = X_train[y_train == 1]
+
+        # use mice to fit the model mice: 1, ele: -1
+        clf = svm.OneClassSVM(nu=nu, kernel='rbf', gamma='scale')
+        clf.fit(X_train_mice)
+
+        y_pred_test = clf.predict(X_test)
+
+        c_matrix = confusion_matrix(y_test, y_pred_test)
         # print(c_matrix)
-        temp_report = classification_report(y_test, predictions, output_dict=True)
-        report_list_nn.append(temp_report)
-        # print(classification_report(y_test,predictions))
-
-        #random forest
-        # print("random forest:")
-        rf = RandomForestClassifier(n_estimators=30, class_weight={1:1,-1:1}, random_state=10)
-        rf = rf.fit(X_train_sample, y_train_sample)
-        predictions = rf.predict(X_test)
-        c_matrix = confusion_matrix(y_test, predictions)
-        # print(c_matrix)
-        temp_report = classification_report(y_test, predictions, output_dict=True)
-        report_list_forest.append(temp_report)
-        # print(classification_report(y_test,predictions))
-
-
-    final_report = get_avg_report(report_list_nn)
-    print("final report nn", final_report)
-    final_report = get_avg_report(report_list_forest)
-    print("final report random forest", final_report)
+        temp_report = classification_report(y_test, y_pred_test, output_dict=True)
+        report_list.append(temp_report)
+        # print(classification_report(y_test, y_pred_test, output_dict=False))
+    final_report = get_avg_report(report_list)
+    print("final report", final_report)
 def get_avg_report(report_list):
     report_array = np.array(report_list)
-    # np.save('NN-5-1.npy', report_array)
-
+    # np.save('OCS-5-1.npy', report_array)
     
     report_list_0 = []
     report_list_1 = []
@@ -170,12 +159,14 @@ def get_avg_report(report_list):
     result['-1'] = dict(df_0.mean())
     result['1'] = dict(df_1.mean())
     result["accuracy"] = np.mean(acc_list)
-    # np.save("NN-5-2.npy", result)
+    # np.save("OCS-5-2.npy", result)
     return result      
 if __name__ == '__main__':
     a = datetime.now()
     print("start time", a)
+
     print("elePercent:", elePercent)
+    print("nu: ", nu)
     for i in range(1,20):
         print("cycle:", i)
         # mice_outliers(i)
