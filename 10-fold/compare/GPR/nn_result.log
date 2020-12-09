@@ -1,0 +1,225 @@
+unibs nn no_weight
+['5', '0.05']
+file /data/dgl/anomaly_detection/10-fold/compare/NN/torch_log/unibs/no_weight/5-0.05.log
+nn ele recall 0.0
+nn mice recall 1.0
+nn acc 0.9500811202315353
+mean flow count  51574.0
+
+['5', '0.1']
+file /data/dgl/anomaly_detection/10-fold/compare/NN/torch_log/unibs/no_weight/5-0.1.log
+nn ele recall 0.0
+nn mice recall 1.0
+nn acc 0.8999932561861851
+mean flow count  51574.0
+
+['5', '0.15']
+file /data/dgl/anomaly_detection/10-fold/compare/NN/torch_log/unibs/no_weight/5-0.15.log
+nn ele recall 0.0281499396083837
+nn mice recall 0.9972107876364281
+nn acc 0.851865162640633
+mean flow count  51574.0
+
+['5', '0.2']
+file /data/dgl/anomaly_detection/10-fold/compare/NN/torch_log/unibs/no_weight/5-0.2.log
+nn ele recall 0.07163954774073451
+nn mice recall 0.9953866188082089
+nn acc 0.811077715748974
+mean flow count  51574.0
+
+['size', '0.05']
+file /data/dgl/anomaly_detection/10-fold/compare/NN/torch_log/unibs/no_weight/size-0.05.log
+nn ele recall 0.0
+nn mice recall 1.0
+nn acc 0.9499924712650657
+mean flow count  51574.0
+
+['size', '0.1']
+file /data/dgl/anomaly_detection/10-fold/compare/NN/torch_log/unibs/no_weight/size-0.1.log
+nn ele recall 0.0
+nn mice recall 1.0
+nn acc 0.8999933254697906
+mean flow count  51574.0
+
+['size', '0.15']
+file /data/dgl/anomaly_detection/10-fold/compare/NN/torch_log/unibs/no_weight/size-0.15.log
+nn ele recall 0.46594415856251875
+nn mice recall 0.9953250098862503
+nn acc 0.9159179684392024
+mean flow count  51574.0
+
+['size', '0.2']
+file /data/dgl/anomaly_detection/10-fold/compare/NN/torch_log/unibs/no_weight/size-0.2.log
+nn ele recall 0.7030654878155516
+nn mice recall 0.9918013283183224
+nn acc 0.9340553509157936
+mean flow count  51574.0
+
+['stat', '0.05']
+file /data/dgl/anomaly_detection/10-fold/compare/NN/torch_log/unibs/no_weight/stat-0.05.log
+nn ele recall 0.0
+nn mice recall 1.0
+nn acc 0.9500811202315353
+mean flow count  51574.0
+
+['stat', '0.1']
+file /data/dgl/anomaly_detection/10-fold/compare/NN/torch_log/unibs/no_weight/stat-0.1.log
+nn ele recall 0.0
+nn mice recall 1.0
+nn acc 0.8999932561861851
+mean flow count  51574.0
+
+['stat', '0.15']
+file /data/dgl/anomaly_detection/10-fold/compare/NN/torch_log/unibs/no_weight/stat-0.15.log
+nn ele recall 0.30052295036092264
+nn mice recall 0.9982494582708634
+nn acc 0.8935878203487327
+mean flow count  51574.0
+
+['stat', '0.2']
+file /data/dgl/anomaly_detection/10-fold/compare/NN/torch_log/unibs/no_weight/stat-0.2.log
+nn ele recall 0.3660481565973774
+nn mice recall 0.9954031830147801
+nn acc 0.8695833512414253
+mean flow count  51574.0
+
+['time', '0.05']
+file /data/dgl/anomaly_detection/10-fold/compare/NN/torch_log/unibs/no_weight/time-0.05.log
+nn ele recall 0.0
+nn mice recall 1.0
+nn acc 0.9499924712650657
+mean flow count  51574.0
+
+['time', '0.1']
+file /data/dgl/anomaly_detection/10-fold/compare/NN/torch_log/unibs/no_weight/time-0.1.log
+nn ele recall 0.0
+nn mice recall 1.0
+nn acc 0.8999933254697906
+mean flow count  51574.0
+
+['time', '0.15']
+file /data/dgl/anomaly_detection/10-fold/compare/NN/torch_log/unibs/no_weight/time-0.15.log
+nn ele recall 0.0
+nn mice recall 1.0
+nn acc 0.8499988188587623
+mean flow count  51574.0
+
+['time', '0.2']
+file /data/dgl/anomaly_detection/10-fold/compare/NN/torch_log/unibs/no_weight/time-0.2.log
+nn ele recall 0.0830391571571143
+nn mice recall 0.9970139479839008
+nn acc 0.8142260723013831
+mean flow count  51574.0
+
+unibs nn weight
+['5', '0.05']
+file /data/dgl/anomaly_detection/10-fold/compare/NN/torch_log/unibs/weight/5-0.05.log
+nn ele recall 0.8625475893938459
+nn mice recall 0.8508815191725674
+nn acc 0.8515679357934957
+mean flow count  51574.0
+
+['5', '0.1']
+file /data/dgl/anomaly_detection/10-fold/compare/NN/torch_log/unibs/weight/5-0.1.log
+nn ele recall 0.8972250794705673
+nn mice recall 0.8268929468033402
+nn acc 0.8339589437575294
+mean flow count  51574.0
+
+['5', '0.15']
+file /data/dgl/anomaly_detection/10-fold/compare/NN/torch_log/unibs/weight/5-0.15.log
+nn ele recall 0.8745228144096714
+nn mice recall 0.8376154223692959
+nn acc 0.8430189364076087
+mean flow count  51574.0
+
+['5', '0.2']
+file /data/dgl/anomaly_detection/10-fold/compare/NN/torch_log/unibs/weight/5-0.2.log
+nn ele recall 0.7902968873656531
+nn mice recall 0.8613318952536089
+nn acc 0.847242498840106
+mean flow count  51574.0
+
+['size', '0.05']
+file /data/dgl/anomaly_detection/10-fold/compare/NN/torch_log/unibs/weight/size-0.05.log
+nn ele recall 0.8144487032269033
+nn mice recall 0.8573341913492271
+nn acc 0.8551951423899714
+mean flow count  51574.0
+
+['size', '0.1']
+file /data/dgl/anomaly_detection/10-fold/compare/NN/torch_log/unibs/weight/size-0.1.log
+nn ele recall 0.8347737205689688
+nn mice recall 0.8994811475847501
+nn acc 0.8929903312528845
+mean flow count  51574.0
+
+['size', '0.15']
+file /data/dgl/anomaly_detection/10-fold/compare/NN/torch_log/unibs/weight/size-0.15.log
+nn ele recall 0.8276931591231405
+nn mice recall 0.9272863155273932
+nn acc 0.912402918162411
+mean flow count  51574.0
+
+['size', '0.2']
+file /data/dgl/anomaly_detection/10-fold/compare/NN/torch_log/unibs/weight/size-0.2.log
+nn ele recall 0.8306011893649456
+nn mice recall 0.932968101467433
+nn acc 0.9125419548163253
+mean flow count  51574.0
+
+['stat', '0.05']
+file /data/dgl/anomaly_detection/10-fold/compare/NN/torch_log/unibs/weight/stat-0.05.log
+nn ele recall 0.9942275831256886
+nn mice recall 0.9990899967054925
+nn acc 0.9988454821699007
+mean flow count  51574.0
+
+['stat', '0.1']
+file /data/dgl/anomaly_detection/10-fold/compare/NN/torch_log/unibs/weight/stat-0.1.log
+nn ele recall 0.994542746742738
+nn mice recall 0.9936683748171745
+nn acc 0.9937420261011521
+mean flow count  51574.0
+
+['stat', '0.15']
+file /data/dgl/anomaly_detection/10-fold/compare/NN/torch_log/unibs/weight/stat-0.15.log
+nn ele recall 0.9838308135382269
+nn mice recall 0.9836975196327531
+nn acc 0.9837111675392176
+mean flow count  51574.0
+
+['stat', '0.2']
+file /data/dgl/anomaly_detection/10-fold/compare/NN/torch_log/unibs/weight/stat-0.2.log
+nn ele recall 0.9653706697764255
+nn mice recall 0.9668280019654455
+nn acc 0.9665707822618909
+mean flow count  51574.0
+
+['time', '0.05']
+file /data/dgl/anomaly_detection/10-fold/compare/NN/torch_log/unibs/weight/time-0.05.log
+nn ele recall 0.5028498764148376
+nn mice recall 0.8661529827854694
+nn acc 0.8479916020665365
+mean flow count  51574.0
+
+['time', '0.1']
+file /data/dgl/anomaly_detection/10-fold/compare/NN/torch_log/unibs/weight/time-0.1.log
+nn ele recall 0.4674127353806186
+nn mice recall 0.8785766147516948
+nn acc 0.8374445028097538
+mean flow count  51574.0
+
+['time', '0.15']
+file /data/dgl/anomaly_detection/10-fold/compare/NN/torch_log/unibs/weight/time-0.15.log
+nn ele recall 0.4818081344876983
+nn mice recall 0.8858434203254605
+nn acc 0.8252969153992445
+mean flow count  51574.0
+
+['time', '0.2']
+file /data/dgl/anomaly_detection/10-fold/compare/NN/torch_log/unibs/weight/time-0.2.log
+nn ele recall 0.4567832746867724
+nn mice recall 0.874003877265201
+nn acc 0.7905522124910513
+mean flow count  51574.0

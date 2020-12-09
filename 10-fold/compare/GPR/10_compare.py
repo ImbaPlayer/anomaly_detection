@@ -2,35 +2,41 @@
 # @Author: Guanglin Duan
 # @Date:   2020-11-03 17:09:05
 # @Last Modified by:   Guanglin Duan
-# @Last Modified time: 2020-12-06 00:50:14
+# @Last Modified time: 2020-12-02 17:20:33
 
 from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report,confusion_matrix
-# from imblearn.over_sampling import SMOTE, ADASYN
-from imblearn.under_sampling import RandomUnderSampler
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.ensemble import IsolationForest
-from sklearn import svm
+from imblearn.over_sampling import SMOTE, ADASYN
+from imblearn.under_sampling import RandomUnderSampler
+from imblearn.combine import SMOTEENN, SMOTETomek
 from sklearn.model_selection import KFold
 from datetime import datetime
+from sklearn.gaussian_process import GaussianProcessRegressor
+from sklearn.naive_bayes import GaussianNB
+from sklearn import svm
+from sklearn.tree import DecisionTreeClassifier
 import pandas as pd
 import numpy as np
 import sys
 
-# elePercent nu train_type dataset_type
+# sys params: ele_percent train_type clf_type dataset_type
+# type: float int int int
 elePercent = float(sys.argv[1])
-nu = float(sys.argv[2])
-train_type_num = int(sys.argv[3])
+train_type_num = int(sys.argv[2])
+clf_type_num = int(sys.argv[3])
 data_type_num = int(sys.argv[4])
 rng = np.random.RandomState(10)
-conta = 0.1
 PACKET_NUMBER = 10
-ALL_DATA_TYPE = ["caida-A", "caida-B", "univ1", "univ2", "unibs"]
 ALL_TRAIN_TYPE = ["5-tuple", "time", "size", "stat"]
-server_name = "sym"
+ALL_CLF_TYPE = ["NN", "GPR", "Naive_Bayes", "SVM", "DT"]
+ALL_DATA_TYPE = ["caida-A", "caida-B", "univ1", "univ2", "unibs"]
+server_name = "dgl"
 dataSetType = ALL_DATA_TYPE[data_type_num]
 trainType = ALL_TRAIN_TYPE[train_type_num]
+clfType = ALL_CLF_TYPE[clf_type_num]
 
 def get_thres(flowSize, elePercent):
     # param flowSize is DataFrame
@@ -54,6 +60,7 @@ def get_col_names(trainType):
     elif trainType == "5-tuple":
         col_names = ["srcIP", "srcPort", "dstIP", "dstPort", "protocol"]
     return col_names
+
 def get_file_name(trainType):
     path1 = ""
     path2 = ""
@@ -101,52 +108,65 @@ def load_data(dataSetType, trainType, num):
     yc = yr.copy(deep=True)
     thres = get_thres(yr, elePercent)
     print("thres: ", thres)
-    yc[yr <= thres] = 1
-    yc[yr > thres ] = -1
-    print("original mice count: ", sum(yc==1))
-    print("original elephant count: ", sum(yc==-1))
+    yc[yr <= thres] = -1
+    yc[yr > thres ] = 1
+    print("original mice count: ", sum(yc==-1))
+    print("original elephant count: ", sum(yc==1))
     return X, yc
+
+def get_clf(clf_type):
+    if clf_type == "GPR":
+        clf = GaussianProcessRegressor(n_restarts_optimizer=10, random_state=10)
+    elif clf_type == "Naive_Bayes":
+        clf = GaussianNB()
+    elif clf_type == "SVM":
+        kernel_type = ['linear', 'poly', 'rbf']
+        clf = svm.SVC(kernel='linear', gamma='scale')
+    elif clf_type == "DT":
+        tree_criterions = ['gini','entropy']
+        clf = DecisionTreeClassifier(criterion = "gini", random_state=10)
+    elif clf_type == "NN":
+        clf = MLPClassifier(hidden_layer_sizes=(100, 40), activation='tanh', max_iter=400, random_state=10)
+    return clf
+
 def ele_outliers(num):
     
-    print("dataset", dataSetType)
-    print("train type", trainType)
     
     X, yc = load_data(dataSetType, trainType, num)
 
     # 10 fold validation
     KF = KFold(n_splits=10, shuffle=True, random_state=10)
-    report_list = []
+    report_list_nn = []
+    
     for train_index, test_index in KF.split(X):
         X_train, X_test = X[train_index], X[test_index]
         y_train, y_test = yc[train_index], yc[test_index]
 
         # undersample
         # smote = RandomUnderSampler(random_state=10)
-        # X_train, y_train = smote.fit_sample(X_train, y_train)
+        # X_train_sample, y_train_sample = smote.fit_sample(X_train, y_train)
+        X_train_sample, y_train_sample = X_train, y_train
 
-        # split into train and test
-        # X_train, X_test, y_train, y_test = train_test_split(X, yc, test_size=0.2, random_state=10)
-        # split train to ele and mice
-        X_train_ele = X_train[y_train == -1]
-        X_train_mice = X_train[y_train == 1]
+        print(sum(y_train==1), sum(y_train==-1), sum(y_test==1), sum(y_test==-1))
+        print("sampling:", sum(y_train_sample==1), sum(y_train_sample==-1))
 
-        # use mice to fit the model mice: 1, ele: -1
-        clf = svm.OneClassSVM(nu=nu, kernel='rbf', gamma='scale')
-        clf.fit(X_train_mice)
-
-        y_pred_test = clf.predict(X_test)
-
-        c_matrix = confusion_matrix(y_test, y_pred_test)
+        clf = get_clf(clfType)
+        clf.fit(X_train_sample, y_train_sample)
+        predictions = clf.predict(X_test)
+        if clfType == "GPR":
+            predictions[predictions > 0] = 1
+            predictions[predictions < 0] = -1
+        c_matrix = confusion_matrix(y_test, predictions)
         # print(c_matrix)
-        temp_report = classification_report(y_test, y_pred_test, output_dict=True)
-        report_list.append(temp_report)
-        # print(classification_report(y_test, y_pred_test, output_dict=False))
-    final_report = get_avg_report(report_list)
-    print("final report", final_report)
+        temp_report = classification_report(y_test, predictions, output_dict=True)
+        report_list_nn.append(temp_report)
+        # print(classification_report(y_test,predictions))
+
+    final_report = get_avg_report(report_list_nn)
+    print("final report {}".format(clfType), final_report)
 def get_avg_report(report_list):
     report_array = np.array(report_list)
-    # np.save('OCS-5-1.npy', report_array)
-    
+    # np.save('NN-5-1.npy', report_array)
     report_list_0 = []
     report_list_1 = []
     acc_list = []
@@ -160,15 +180,16 @@ def get_avg_report(report_list):
     result['-1'] = dict(df_0.mean())
     result['1'] = dict(df_1.mean())
     result["accuracy"] = np.mean(acc_list)
-    # np.save("OCS-5-2.npy", result)
+    # np.save("NN-5-2.npy", result)
     return result      
 if __name__ == '__main__':
     a = datetime.now()
     print("start time", a)
-
+    print("dataset", dataSetType)
     print("elePercent:", elePercent)
-    print("nu: ", nu)
-    for i in range(3):
+    print("train type", trainType)
+    print("clf type", clfType)
+    for i in range(1,20):
         print("cycle:", i)
         # mice_outliers(i)
         ele_outliers(i)

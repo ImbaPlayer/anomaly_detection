@@ -2,7 +2,7 @@
 # @Author: Guanglin Duan
 # @Date:   2020-11-03 17:09:05
 # @Last Modified by:   Guanglin Duan
-# @Last Modified time: 2020-12-06 00:50:14
+# @Last Modified time: 2020-11-30 16:54:25
 
 from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import train_test_split
@@ -18,19 +18,17 @@ import pandas as pd
 import numpy as np
 import sys
 
-# elePercent nu train_type dataset_type
+# thres = int(sys.argv[1])
 elePercent = float(sys.argv[1])
 nu = float(sys.argv[2])
-train_type_num = int(sys.argv[3])
-data_type_num = int(sys.argv[4])
 rng = np.random.RandomState(10)
 conta = 0.1
 PACKET_NUMBER = 10
-ALL_DATA_TYPE = ["caida-A", "caida-B", "univ1", "univ2", "unibs"]
+ALL_DATA_TYPE = ["caida-A", "caida-B", "univ1", "univ2"]
 ALL_TRAIN_TYPE = ["5-tuple", "time", "size", "stat"]
-server_name = "sym"
-dataSetType = ALL_DATA_TYPE[data_type_num]
-trainType = ALL_TRAIN_TYPE[train_type_num]
+server_name = "dgl"
+dataSetType = ALL_DATA_TYPE[2]
+trainType = ALL_TRAIN_TYPE[0]
 
 def get_thres(flowSize, elePercent):
     # param flowSize is DataFrame
@@ -131,7 +129,9 @@ def ele_outliers(num):
         X_train_mice = X_train[y_train == 1]
 
         # use mice to fit the model mice: 1, ele: -1
-        clf = svm.OneClassSVM(nu=nu, kernel='rbf', gamma='scale')
+        # clf = svm.OneClassSVM(nu=nu, kernel='rbf', gamma='scale') 
+        kernel_type = ['linear', 'poly', 'rbf']
+        clf = svm.SVC(C=, kernel='rbf', gamma='scale')
         clf.fit(X_train_mice)
 
         y_pred_test = clf.predict(X_test)
@@ -168,7 +168,7 @@ if __name__ == '__main__':
 
     print("elePercent:", elePercent)
     print("nu: ", nu)
-    for i in range(3):
+    for i in range(1,20):
         print("cycle:", i)
         # mice_outliers(i)
         ele_outliers(i)

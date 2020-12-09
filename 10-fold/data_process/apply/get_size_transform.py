@@ -2,7 +2,7 @@
 # @Author: Guanglin Duan
 # @Date:   2020-11-16 19:00:38
 # @Last Modified by:   Guanglin Duan
-# @Last Modified time: 2020-11-25 16:49:38
+# @Last Modified time: 2020-11-30 19:02:22
 import pandas as pd
 from datetime import datetime
 import numpy as np
@@ -10,7 +10,7 @@ import numpy as np
 # inputName = "/data/xgr/sketch_data/equinix-nyc.dirB.20190117-140000.UTC.anon.pcap"
 
 PACKET_NUMBER = 10
-ALL_DATA_TYPE = ["caida-A", "caida-B", "univ1", "univ2"]
+ALL_DATA_TYPE = ["caida-A", "caida-B", "univ1", "univ2", "unibs"]
 
 def get_head_packets(packets):
     result = packets.tolist()
@@ -23,9 +23,9 @@ def get_exact_length(index, packets):
     return result[index]
 
 def new_extract(num):
-    data_type = ALL_DATA_TYPE[3]
-    inputName = "/data/sym/anomaly_detection/data/10-fold/{}/packet-level/{}-{}.csv".format(data_type, data_type, num)
-    saveName = "/data/sym/anomaly_detection/data/10-fold/{}/dec-size/{}-{}.csv".format(data_type, data_type, num)
+    data_type = ALL_DATA_TYPE[4]
+    inputName = "/data/dgl/anomaly_detection/data/10-fold/{}/packet-level/{}-{}.csv".format(data_type, data_type, num)
+    saveName = "/data/dgl/anomaly_detection/data/10-fold/{}/dec-size/{}-{}.csv".format(data_type, data_type, num)
 
     #指定分隔符为/t
     # time srcIP srcPort dstIP dstPort protocol length
@@ -53,7 +53,7 @@ def new_extract(num):
 if __name__ == '__main__':
     a = datetime.now()
     print("start time", a)
-    for i in range(7, 9):
+    for i in range(3):
         new_extract(i)
         print("finish", i)
     b = datetime.now()

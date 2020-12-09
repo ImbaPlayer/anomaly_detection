@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# @Author: Guanglin Duan
+# @Date:   2020-12-06 00:55:44
+# @Last Modified by:   Guanglin Duan
+# @Last Modified time: 2020-12-06 01:13:48
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -18,15 +23,17 @@ from torch.autograd import Variable
 from datetime import datetime
 from sklearn.model_selection import KFold
 
+# elePercent train_type weight_type dataset
 elePercent = float(sys.argv[1])
 train_type_num = int(sys.argv[2])
 weight_type = sys.argv[3]
+data_type_num = int(sys.argv[4])
 rng = np.random.RandomState(10)
 PACKET_NUMBER = 10
-ALL_DATA_TYPE = ["caida-A", "caida-B", "univ1", "univ2"]
+ALL_DATA_TYPE = ["caida-A", "caida-B", "univ1", "univ2", "unibs"]
 ALL_TRAIN_TYPE = ["5-tuple", "time", "size", "stat"]
-server_name = "sym"
-dataSetType = ALL_DATA_TYPE[3]
+server_name = "dgl"
+dataSetType = ALL_DATA_TYPE[data_type_num]
 trainType = ALL_TRAIN_TYPE[train_type_num]
 
 #define the network class
@@ -202,7 +209,7 @@ def main(num):
                 y_pred = y_pred.squeeze()
                 #compute cross entrophy loss
                 if weight_type == "no":
-                    print("no weight")
+                    # print("no weight")
                     criterion = nn.BCEWithLogitsLoss()
                 else:
                     criterion = nn.BCEWithLogitsLoss(weight=class_weight[batch_y.long()])
@@ -252,7 +259,7 @@ if __name__ == '__main__':
     a = datetime.now()
     print("start time", a)
     print("elePercent:", elePercent)
-    for i in range(0,9):
+    for i in range(3):
         print("cycle:", i)
         # mice_outliers(i)
         main(i)

@@ -2,22 +2,22 @@
 # @Author: Guanglin Duan
 # @Date:   2020-11-14 21:57:59
 # @Last Modified by:   Guanglin Duan
-# @Last Modified time: 2020-11-25 17:01:35
+# @Last Modified time: 2020-11-30 19:02:38
 import pandas as pd
 from datetime import datetime
 
 # inputName = "/data/xgr/sketch_data/equinix-nyc.dirB.20190117-140000.UTC.anon.pcap"
 
 PACKET_NUMBER = 10
-ALL_DATA_TYPE = ["caida-A", "caida-B", "univ1", "univ2"]
+ALL_DATA_TYPE = ["caida-A", "caida-B", "univ1", "univ2", "unibs"]
 def new_extract(num):
-    data_type = ALL_DATA_TYPE[3]
-    # inputName = "/data/sym/one-class-svm/data/mean_of_five/packet-level/caida-B-50W-{}.csv".format(num)
-    inputName = "/data/sym/anomaly_detection/data/10-fold/{}/packet-level/{}-{}.csv".format(data_type, data_type, num)
-    saveName = "/data/sym/anomaly_detection/data/10-fold/{}/dec-time/{}-{}.csv".format(data_type, data_type, num)
+    data_type = ALL_DATA_TYPE[4]
+    # inputName = "/data/dgl/one-class-svm/data/mean_of_five/packet-level/caida-B-50W-{}.csv".format(num)
+    inputName = "/data/dgl/anomaly_detection/data/10-fold/{}/packet-level/{}-{}.csv".format(data_type, data_type, num)
+    saveName = "/data/dgl/anomaly_detection/data/10-fold/{}/dec-time/{}-{}.csv".format(data_type, data_type, num)
 
-    # inputName = "/data/sym/one-class-svm/data/mean_of_five/packet-level/univ1-50W-{}.csv".format(num)
-    # saveName = "/data/sym/one-class-svm/data/mean_of_five/dec-feature/univ1-50W-{0}-{1}.csv".format(PACKET_NUMBER, num)
+    # inputName = "/data/dgl/one-class-svm/data/mean_of_five/packet-level/univ1-50W-{}.csv".format(num)
+    # saveName = "/data/dgl/one-class-svm/data/mean_of_five/dec-feature/univ1-50W-{0}-{1}.csv".format(PACKET_NUMBER, num)
     #指定分隔符为/t
     # time srcIP srcPort dstIP dstPort protocol length
     col_names = ["time", "srcIP", "srcPort", "dstIP", "dstPort", "protocol", "length"]
@@ -60,7 +60,7 @@ def get_interval(arrive_time):
 if __name__ == '__main__':
     a = datetime.now()
     print("start time", a)
-    for i in range(9):
+    for i in range(3):
         new_extract(i)
         print("finish", i)
     b = datetime.now()

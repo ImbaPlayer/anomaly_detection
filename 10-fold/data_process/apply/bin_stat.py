@@ -2,7 +2,7 @@
 # @Author: Guanglin Duan
 # @Date:   2020-11-16 19:09:10
 # @Last Modified by:   Guanglin Duan
-# @Last Modified time: 2020-11-25 18:48:11
+# @Last Modified time: 2020-11-30 19:57:51
 from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report,confusion_matrix
@@ -12,14 +12,14 @@ from datetime import datetime
 
 
 PACKET_NUMBER = 10
-ALL_DATA_TYPE = ["caida-A", "caida-B", "univ1", "univ2"]
+ALL_DATA_TYPE = ["caida-A", "caida-B", "univ1", "univ2", "unibs"]
 def main(num):
-    data_type = ALL_DATA_TYPE[3]
-    fileName = "/data/sym/anomaly_detection/data/10-fold/{}/dec-stat/{}-{}.csv".format(data_type, data_type, num)
-    saveName_5 = "/data/sym/anomaly_detection/data/10-fold/{}/bin-5/{}-{}.csv".format(data_type, data_type, num)
-    saveName_stat = "/data/sym/anomaly_detection/data/10-fold/{}/bin-stat/{}-{}.csv".format(data_type, data_type, num)
-    # fileName = "/data/sym/one-class-svm/data/mean_of_five/dec-feature/univ1-50W-{0}-{1}.csv".format(5, num)
-    # saveName = "/data/sym/one-class-svm/data/mean_of_five/bin-feature/univ1-50W-{0}-{1}.csv".format(5, num)
+    data_type = ALL_DATA_TYPE[4]
+    fileName = "/data/dgl/anomaly_detection/data/10-fold/{}/dec-stat/{}-{}.csv".format(data_type, data_type, num)
+    saveName_5 = "/data/dgl/anomaly_detection/data/10-fold/{}/bin-5/{}-{}.csv".format(data_type, data_type, num)
+    saveName_stat = "/data/dgl/anomaly_detection/data/10-fold/{}/bin-stat/{}-{}.csv".format(data_type, data_type, num)
+    # fileName = "/data/dgl/one-class-svm/data/mean_of_five/dec-feature/univ1-50W-{0}-{1}.csv".format(5, num)
+    # saveName = "/data/dgl/one-class-svm/data/mean_of_five/bin-feature/univ1-50W-{0}-{1}.csv".format(5, num)
     # fileName = "size-1.csv"
     # saveName = "size-2.csv"
     df = pd.read_csv(fileName)
@@ -77,7 +77,7 @@ def main(num):
 if __name__ == '__main__':
     a = datetime.now()
     print("start time", a)
-    for i in range(9):
+    for i in range(3):
         main(i)
         print("finish", i)
     b = datetime.now()

@@ -2,7 +2,7 @@
 # @Author: Guanglin Duan
 # @Date:   2020-11-14 22:02:33
 # @Last Modified by:   Guanglin Duan
-# @Last Modified time: 2020-11-24 23:32:10
+# @Last Modified time: 2020-11-30 14:50:40
 #!/usr/bin/env python3
 
 """pcap2csv
@@ -171,12 +171,19 @@ def main():
     #         load_path = "/data/xgr/sketch_data/caida_dirA/equinix-nyc.dirA.20190117-13{}00.UTC.anon.pcap".format(i)
     #     save_path = "/data/sym/anomaly_detection/data/10-fold/caida-A/packet-level/caida-A-{}.csv".format(i)
     #     pcap2csv(load_path, save_path)
-    # univ1
-    for i in range(9):
-        load_path = "/data/xgr/sketch_data/imc_univ2/univ2_pt{}".format(i)
-        save_path = "/data/sym/anomaly_detection/data/10-fold/univ2/packet-level/univ2-{}.csv".format(i)
+    # univ1 & univ2
+    # for i in range(9):
+    #     load_path = "/data/xgr/sketch_data/imc_univ2/univ2_pt{}".format(i)
+    #     save_path = "/data/sym/anomaly_detection/data/10-fold/univ2/packet-level/univ2-{}.csv".format(i)
+    #     pcap2csv(load_path, save_path)
+    #     print("finish", i)
+    # unibs
+    unibs_data = ["0930", "1001", "1002"]
+    for index, temp_data in enumerate(["0930", "1001", "1002"]):
+        load_path = "/data/xgr/sketch_data/unibs/unibs2009{}.anon.pcap".format(temp_data)
+        save_path = "/data/dgl/anomaly_detection/data/10-fold/unibs/packet-level/unibs-{}".format(index)
         pcap2csv(load_path, save_path)
-        print("finish", i)
+        print("finish", temp_data)
 
 
     # pcap2csv(args.pcap, args.csv)

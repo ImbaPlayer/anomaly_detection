@@ -1,0 +1,353 @@
+unibs other
+['5', 'DT', '0.05']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/5-DT-0.05.log
+ele recall 0.47079482791610117
+mice recall 0.9677135906240943
+acc 0.9428523514316919
+mean flow count  51574.0
+
+['5', 'DT', '0.1']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/5-DT-0.1.log
+ele recall 0.5841348478183052
+mice recall 0.9489136243020474
+acc 0.9124009613565224
+mean flow count  51574.0
+
+['5', 'DT', '0.15']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/5-DT-0.15.log
+ele recall 0.6588313623269415
+mice recall 0.9326343444857725
+acc 0.8915034413678509
+mean flow count  51574.0
+
+['5', 'DT', '0.2']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/5-DT-0.2.log
+ele recall 0.6799263414323965
+mice recall 0.9109550348092438
+acc 0.8648538007901534
+mean flow count  51574.0
+
+['5', 'GPR', '0.05']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/5-GPR-0.05.log
+ele recall 0.41729969834794034
+mice recall 0.9784319429013458
+acc 0.9503083051724222
+mean flow count  51574.0
+
+['5', 'GPR', '0.1']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/5-GPR-0.1.log
+ele recall 0.5405826961993507
+mice recall 0.9617263838350449
+acc 0.9195692238679339
+mean flow count  51574.0
+
+['5', 'GPR', '0.15']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/5-GPR-0.15.log
+ele recall 0.6407252346452645
+mice recall 0.9448750764536039
+acc 0.8991959953614628
+mean flow count  51574.0
+
+['5', 'GPR', '0.2']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/5-GPR-0.2.log
+ele recall 0.6862835472530862
+mice recall 0.9255832131796425
+acc 0.8776891840121073
+mean flow count  51574.0
+
+['5', 'NB', '0.05']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/5-NB-0.05.log
+ele recall 0.997293132155562
+mice recall 0.7296348660298086
+acc 0.7430043266171484
+mean flow count  51574.0
+
+['5', 'NB', '0.1']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/5-NB-0.1.log
+ele recall 0.9766475864761727
+mice recall 0.7618485405931456
+acc 0.783336018735944
+mean flow count  51574.0
+
+['5', 'NB', '0.15']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/5-NB-0.15.log
+ele recall 0.9487865232566609
+mice recall 0.7120790449644304
+acc 0.7475730122112113
+mean flow count  51574.0
+
+['5', 'NB', '0.2']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/5-NB-0.2.log
+ele recall 0.8849995118354562
+mice recall 0.639576600900493
+acc 0.6885724087387168
+mean flow count  51574.0
+
+['5', 'SVM', '0.05']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/5-SVM-0.05.log
+ele recall 0.0
+mice recall 1.0
+acc 0.9500811202315353
+mean flow count  51574.0
+
+['5', 'SVM', '0.1']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/5-SVM-0.1.log
+ele recall 0.0008005865374124185
+mice recall 1.0
+acc 0.9000727437836836
+mean flow count  51574.0
+
+['5', 'SVM', '0.15']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/5-SVM-0.15.log
+ele recall 0.37803201275228854
+mice recall 0.9554100623595768
+acc 0.8687696091765584
+mean flow count  51574.0
+
+['5', 'SVM', '0.2']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/5-SVM-0.2.log
+ele recall 0.5268372135946069
+mice recall 0.9233218198246821
+acc 0.8440723540130962
+mean flow count  51574.0
+
+['size', 'GPR', '0.05']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/size-GPR-0.05.log
+ele recall 0.33146341756620185
+mice recall 0.9873811586170582
+acc 0.9545694862892671
+mean flow count  41641.0
+
+['size', 'GPR', '0.1']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/size-GPR-0.1.log
+ele recall 0.6543263946831027
+mice recall 0.9684659758605414
+acc 0.9370581439562007
+mean flow count  51574.0
+
+['size', 'GPR', '0.15']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/size-GPR-0.15.log
+ele recall 0.7613991028543261
+mice recall 0.9706898107563053
+acc 0.9393088191935879
+mean flow count  51574.0
+
+['size', 'GPR', '0.2']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/size-GPR-0.2.log
+empty error
+
+['size', 'NB', '0.05']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/size-NB-0.05.log
+ele recall 0.7975682267253866
+mice recall 0.7456020240198705
+acc 0.7481629871180627
+mean flow count  51574.0
+
+['size', 'NB', '0.1']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/size-NB-0.1.log
+ele recall 0.8302072803633559
+mice recall 0.8212475731814545
+acc 0.8221205086594533
+mean flow count  51574.0
+
+['size', 'NB', '0.15']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/size-NB-0.15.log
+ele recall 0.8483202940060629
+mice recall 0.8452965827658341
+acc 0.8457486675512856
+mean flow count  51574.0
+
+['size', 'NB', '0.2']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/size-NB-0.2.log
+ele recall 0.8464303010903121
+mice recall 0.8830686436953981
+acc 0.8757356557361399
+mean flow count  51574.0
+
+['size', 'SVM', '0.05']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/size-SVM-0.05.log
+ele recall 0.0
+mice recall 1.0
+acc 0.9499987917455858
+mean flow count  41641.0
+
+['size', 'SVM', '0.1']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/size-SVM-0.1.log
+ele recall 0.6060768201344773
+mice recall 0.9655723542771351
+acc 0.9296051699248805
+mean flow count  51574.0
+
+['size', 'SVM', '0.15']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/size-SVM-0.15.log
+ele recall 0.6597118524193252
+mice recall 0.9804937080323111
+acc 0.9323842639642127
+mean flow count  51574.0
+
+['size', 'SVM', '0.2']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/size-SVM-0.2.log
+ele recall 0.722611422714007
+mice recall 0.9810240840378684
+acc 0.9293485698136955
+mean flow count  51574.0
+
+['stat', 'DT', '0.05']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/stat-DT-0.05.log
+ele recall 0.9971301659294326
+mice recall 0.9998566624559694
+acc 0.9997178873643686
+mean flow count  51574.0
+
+['stat', 'DT', '0.1']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/stat-DT-0.1.log
+ele recall 0.9754246398303108
+mice recall 0.9978558323463432
+acc 0.9956144683535791
+mean flow count  51574.0
+
+['stat', 'DT', '0.15']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/stat-DT-0.15.log
+ele recall 0.9521375765863356
+mice recall 0.9927405240714986
+acc 0.9866497467985605
+mean flow count  51574.0
+
+['stat', 'DT', '0.2']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/stat-DT-0.2.log
+ele recall 0.9486948835275514
+mice recall 0.9877104308336149
+acc 0.9799344532188821
+mean flow count  51574.0
+
+['stat', 'GPR', '0.05']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/stat-GPR-0.05.log
+ele recall 0.9178023480386381
+mice recall 0.9998600968902147
+acc 0.9957296211997162
+mean flow count  51574.0
+
+['stat', 'GPR', '0.1']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/stat-GPR-0.1.log
+ele recall 0.8862275668396355
+mice recall 0.9995655540932752
+acc 0.9882308977947589
+mean flow count  51574.0
+
+['stat', 'GPR', '0.15']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/stat-GPR-0.15.log
+ele recall 0.951480979265988
+mice recall 0.9912002937011297
+acc 0.9852430117648063
+mean flow count  51574.0
+
+['stat', 'GPR', '0.2']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/stat-GPR-0.2.log
+ele recall 0.9399497840306542
+mice recall 0.9872473352762894
+acc 0.9778045098861474
+mean flow count  51574.0
+
+['stat', 'NB', '0.05']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/stat-NB-0.05.log
+ele recall 0.995480677558881
+mice recall 0.9736125140851639
+acc 0.9747053710481076
+mean flow count  51574.0
+
+['stat', 'NB', '0.1']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/stat-NB-0.1.log
+ele recall 0.9949793917515463
+mice recall 0.8046995588131316
+acc 0.8237288808592993
+mean flow count  51574.0
+
+['stat', 'NB', '0.15']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/stat-NB-0.15.log
+ele recall 0.9707557955131376
+mice recall 0.852469950744342
+acc 0.8702076766655104
+mean flow count  51574.0
+
+['stat', 'NB', '0.2']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/stat-NB-0.2.log
+ele recall 0.9019662702447105
+mice recall 0.9011130986193466
+acc 0.9013789313925615
+mean flow count  51574.0
+
+['stat', 'SVM', '0.05']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/stat-SVM-0.05.log
+ele recall 0.9982129904607498
+mice recall 0.9995291864928632
+acc 0.9994639739488803
+mean flow count  51574.0
+
+['stat', 'SVM', '0.1']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/stat-SVM-0.1.log
+ele recall 0.9735074121337886
+mice recall 0.9967187467048605
+acc 0.9943924614583546
+mean flow count  51574.0
+
+['stat', 'SVM', '0.15']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/stat-SVM-0.15.log
+ele recall 0.9579358040873304
+mice recall 0.9897471520873354
+acc 0.9849654311659745
+mean flow count  51574.0
+
+['stat', 'SVM', '0.2']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/stat-SVM-0.2.log
+ele recall 0.949786844901055
+mice recall 0.9810904498321816
+acc 0.974874331221914
+mean flow count  51574.0
+
+['time', 'GPR', '0.05']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/time-GPR-0.05.log
+empty error
+
+['time', 'GPR', '0.1']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/time-GPR-0.1.log
+empty error
+
+['time', 'GPR', '0.15']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/time-GPR-0.15.log
+empty error
+
+['time', 'GPR', '0.2']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/time-GPR-0.2.log
+empty error
+
+['time', 'NB', '0.05']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/time-NB-0.05.log
+ele recall 0.9843394166140257
+mice recall 0.11524806488558798
+acc 0.1587189257365985
+mean flow count  51574.0
+
+['time', 'NB', '0.1']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/time-NB-0.1.log
+ele recall 0.9822411703654564
+mice recall 0.062412431581458906
+acc 0.1544105471229624
+mean flow count  51574.0
+
+['time', 'NB', '0.15']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/time-NB-0.15.log
+ele recall 0.9821218037625853
+mice recall 0.050018336144793694
+acc 0.18982829146230418
+mean flow count  51574.0
+
+['time', 'NB', '0.2']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/time-NB-0.2.log
+ele recall 0.98253900394699
+mice recall 0.0358086582057558
+acc 0.2251420951725043
+mean flow count  51574.0
+
+['time', 'SVM', '0.2']
+file /data/dgl/anomaly_detection/10-fold/compare/GPR/log/unibs/time-SVM-0.2.log
+empty error

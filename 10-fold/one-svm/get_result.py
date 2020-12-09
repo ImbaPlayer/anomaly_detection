@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# @Author: Guanglin Duan
+# @Date:   2020-11-30 17:22:08
+# @Last Modified by:   Guanglin Duan
+# @Last Modified time: 2020-11-30 17:22:08
 import numpy as np
 import ast
 import sys
@@ -112,9 +117,9 @@ def process_torch():
                 if word_list[2] == "nn":
                     for i in range(len(word_list)):
                         if word_list[i] == "-1":
-                            nn_ele.append(float(word_list[i+4]))
-                        if word_list[i] == "1":
                             nn_mice.append(float(word_list[i+4]))
+                        if word_list[i] == "1":
+                            nn_ele.append(float(word_list[i+4]))
                         if word_list[i] == "accuracy":
                             nn_acc.append(float(word_list[i+1]))
             elif "original mice count" in line:
