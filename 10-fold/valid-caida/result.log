@@ -1,0 +1,58 @@
+# caida-A 5W
+{'GPR': {'5-tuple': {'ele_recall': ['error', 'error', 'error', 'error'], 'mice_recall': ['error', 'error', 'error', 'error'], 'acc': ['error', 'error', 'error', 'error']}, 'time': {'ele_recall': ['error', 'error', 'error', 'error'], 'mice_recall': ['error', 'error', 'error', 'error'], 'acc': ['error', 'error', 'error', 'error']}, 'size': {'ele_recall': ['error', 'error', 'error', 'error'], 'mice_recall': ['error', 'error', 'error', 'error'], 'acc': ['error', 'error', 'error', 'error']}, 'stat': {'ele_recall': ['error', 'error', 'error', 'error'], 'mice_recall': ['error', 'error', 'error', 'error'], 'acc': ['error', 'error', 'error', 'error']}}, 'NB': {'5-tuple': {'ele_recall': [0.30231008159497613, 0.6002687159929961, 0.697516040505001, 0.7024773506896071], 'mice_recall': [0.8752093227089119, 0.7282194999256385, 0.7358776275376006, 0.7626862375507214], 'acc': [0.84656, 0.7154, 0.7301, 0.75066]}, 'time': {'ele_recall': [0.9794962727443108, 0.9665395320667016, 0.9572392385354902, 0.9504788690033379], 'mice_recall': [0.24589442652436996, 0.21621816182999387, 0.20761428989239886, 0.19573720972355876], 'acc': [0.28256, 0.29124, 0.32004, 0.34668]}, 'size': {'ele_recall': [0.964031759397467, 0.9573786909638713, 0.9128889272939263, 0.8826832791960915], 'mice_recall': [0.8347534156406994, 0.8366383656417323, 0.8426715872648881, 0.8495832433156141], 'acc': [0.8412200000000001, 0.8487199999999999, 0.8532, 0.8561799999999999]}, 'stat': {'ele_recall': [0.30231008159497613, 0.6002687159929961, 0.697516040505001, 0.7024773506896071], 'mice_recall': [0.8752093227089119, 0.7282194999256385, 0.7358776275376006, 0.7626862375507214], 'acc': [0.84656, 0.7154, 0.7301, 0.75066]}}, 'SVM': {'5-tuple': {'ele_recall': [0.0, 0.0, 0.0, -1], 'mice_recall': [1.0, 1.0, 1.0, -1], 'acc': [0.9499999999999998, 0.9, 0.85, -1]}, 'time': {'ele_recall': [0.0, 0.0, 'error', -1], 'mice_recall': [1.0, 1.0, 'error', -1], 'acc': [0.9499999999999998, 0.8999999999999998, 'error', -1]}, 'size': {'ele_recall': [0.5310498348415618, 0.5697832233481842, -1, -1], 'mice_recall': [0.980841644122475, 0.978622133892677, -1, -1], 'acc': [0.95838, 0.9377800000000001, -1, -1]}, 'stat': {'ele_recall': [0.0, 0.0, -1, -1], 'mice_recall': [1.0, 1.0, -1, -1], 'acc': [0.9499999999999998, 0.9, -1, -1]}}}
+
+clf_type GPR
+train_type 5-tuple
+{'ele_recall': ['error', 'error', 'error', 'error'], 'mice_recall': ['error', 'error', 'error', 'error'], 'acc': ['error', 'error', 'error', 'error']}
+train_type time
+{'ele_recall': ['error', 'error', 'error', 'error'], 'mice_recall': ['error', 'error', 'error', 'error'], 'acc': ['error', 'error', 'error', 'error']}
+train_type size
+{'ele_recall': ['error', 'error', 'error', 'error'], 'mice_recall': ['error', 'error', 'error', 'error'], 'acc': ['error', 'error', 'error', 'error']}
+train_type stat
+{'ele_recall': ['error', 'error', 'error', 'error'], 'mice_recall': ['error', 'error', 'error', 'error'], 'acc': ['error', 'error', 'error', 'error']}
+clf_type NB
+train_type 5-tuple
+{'ele_recall': [0.30231008159497613, 0.6002687159929961, 0.697516040505001, 0.7024773506896071], 'mice_recall': [0.8752093227089119, 0.7282194999256385, 0.7358776275376006, 0.7626862375507214], 'acc': [0.84656, 0.7154, 0.7301, 0.75066]}
+train_type time
+{'ele_recall': [0.9794962727443108, 0.9665395320667016, 0.9572392385354902, 0.9504788690033379], 'mice_recall': [0.24589442652436996, 0.21621816182999387, 0.20761428989239886, 0.19573720972355876], 'acc': [0.28256, 0.29124, 0.32004, 0.34668]}
+train_type size
+{'ele_recall': [0.964031759397467, 0.9573786909638713, 0.9128889272939263, 0.8826832791960915], 'mice_recall': [0.8347534156406994, 0.8366383656417323, 0.8426715872648881, 0.8495832433156141], 'acc': [0.8412200000000001, 0.8487199999999999, 0.8532, 0.8561799999999999]}
+train_type stat
+{'ele_recall': [0.30231008159497613, 0.6002687159929961, 0.697516040505001, 0.7024773506896071], 'mice_recall': [0.8752093227089119, 0.7282194999256385, 0.7358776275376006, 0.7626862375507214], 'acc': [0.84656, 0.7154, 0.7301, 0.75066]}
+clf_type SVM
+train_type 5-tuple
+{'ele_recall': [0.0, 0.0, 0.0, -1], 'mice_recall': [1.0, 1.0, 1.0, -1], 'acc': [0.9499999999999998, 0.9, 0.85, -1]}
+train_type time
+{'ele_recall': [0.0, 0.0, 'error', -1], 'mice_recall': [1.0, 1.0, 'error', -1], 'acc': [0.9499999999999998, 0.8999999999999998, 'error', -1]}
+train_type size
+{'ele_recall': [0.5310498348415618, 0.5697832233481842, -1, -1], 'mice_recall': [0.980841644122475, 0.978622133892677, -1, -1], 'acc': [0.95838, 0.9377800000000001, -1, -1]}
+train_type stat
+{'ele_recall': [0.0, 0.0, -1, -1], 'mice_recall': [1.0, 1.0, -1, -1], 'acc': [0.9499999999999998, 0.9, -1, -1]}
+
+
+# 10W
+{'GPR': {'5-tuple': {'ele_recall': ['error', 'error', 'error', 'error'], 'mice_recall': ['error', 'error', 'error', 'error'], 'acc': ['error', 'error', 'error', 'error']}, 'time': {'ele_recall': ['error', 'error', 'error', 'error'], 'mice_recall': ['error', 'error', 'error', 'error'], 'acc': ['error', 'error', 'error', 'error']}, 'size': {'ele_recall': ['error', 'error', 'error', 'error'], 'mice_recall': ['error', 'error', 'error', 'error'], 'acc': ['error', 'error', 'error', 'error']}, 'stat': {'ele_recall': ['error', 'error', 'error', 'error'], 'mice_recall': ['error', 'error', 'error', 'error'], 'acc': ['error', 'error', 'error', 'error']}}, 'NB': {'5-tuple': {'ele_recall': [0.5628358642971573, 0.7312568875057265, 0.7399803084489396, 0.6935533106458758], 'mice_recall': [0.776040046334886, 0.7542971413092191, 0.7806658477796661, 0.7917758937225073], 'acc': [0.7653800000000001, 0.752, 0.7745599999999999, 0.77213]}, 'time': {'ele_recall': [0.9606392711624512, 0.9409734340209355, 0.9306578574747826, 0.9087737891080065], 'mice_recall': [0.22676614828555092, 0.20659382892664452, 0.1825523917548011, 0.1767501324989576], 'acc': [0.26345999999999997, 0.28003999999999996, 0.29477, 0.32316]}, 'size': {'ele_recall': [0.9728966996994144, 0.9264548061772262, 0.9111096435382213, 0.9261722635541126], 'mice_recall': [0.8445170512932135, 0.845390234925876, 0.8650802226960804, 0.8910216241701793], 'acc': [0.85093, 0.85351, 0.8720000000000001, 0.8980499999999999]}, 'stat': {'ele_recall': [0.5628358642971573, 0.7312568875057265, 0.7399803084489396, 0.6935533106458758], 'mice_recall': [0.776040046334886, 0.7542971413092191, 0.7806658477796661, 0.7917758937225073], 'acc': [0.7653800000000001, 0.752, 0.7745599999999999, 0.77213]}}, 'SVM': {'5-tuple': {'ele_recall': [0.0, -1, -1, -1], 'mice_recall': [1.0, -1, -1, -1], 'acc': [0.9500100000000001, -1, -1, -1]}, 'time': {'ele_recall': ['error', -1, -1, -1], 'mice_recall': ['error', -1, -1, -1], 'acc': ['error', -1, -1, -1]}}}
+
+clf_type GPR
+train_type 5-tuple
+{'ele_recall': ['error', 'error', 'error', 'error'], 'mice_recall': ['error', 'error', 'error', 'error'], 'acc': ['error', 'error', 'error', 'error']}
+train_type time
+{'ele_recall': ['error', 'error', 'error', 'error'], 'mice_recall': ['error', 'error', 'error', 'error'], 'acc': ['error', 'error', 'error', 'error']}
+train_type size
+{'ele_recall': ['error', 'error', 'error', 'error'], 'mice_recall': ['error', 'error', 'error', 'error'], 'acc': ['error', 'error', 'error', 'error']}
+train_type stat
+{'ele_recall': ['error', 'error', 'error', 'error'], 'mice_recall': ['error', 'error', 'error', 'error'], 'acc': ['error', 'error', 'error', 'error']}
+clf_type NB
+train_type 5-tuple
+{'ele_recall': [0.5628358642971573, 0.7312568875057265, 0.7399803084489396, 0.6935533106458758], 'mice_recall': [0.776040046334886, 0.7542971413092191, 0.7806658477796661, 0.7917758937225073], 'acc': [0.7653800000000001, 0.752, 0.7745599999999999, 0.77213]}
+train_type time
+{'ele_recall': [0.9606392711624512, 0.9409734340209355, 0.9306578574747826, 0.9087737891080065], 'mice_recall': [0.22676614828555092, 0.20659382892664452, 0.1825523917548011, 0.1767501324989576], 'acc': [0.26345999999999997, 0.28003999999999996, 0.29477, 0.32316]}
+train_type size
+{'ele_recall': [0.9728966996994144, 0.9264548061772262, 0.9111096435382213, 0.9261722635541126], 'mice_recall': [0.8445170512932135, 0.845390234925876, 0.8650802226960804, 0.8910216241701793], 'acc': [0.85093, 0.85351, 0.8720000000000001, 0.8980499999999999]}
+train_type stat
+{'ele_recall': [0.5628358642971573, 0.7312568875057265, 0.7399803084489396, 0.6935533106458758], 'mice_recall': [0.776040046334886, 0.7542971413092191, 0.7806658477796661, 0.7917758937225073], 'acc': [0.7653800000000001, 0.752, 0.7745599999999999, 0.77213]}
+clf_type SVM
+train_type 5-tuple
+{'ele_recall': [0.0, -1, -1, -1], 'mice_recall': [1.0, -1, -1, -1], 'acc': [0.9500100000000001, -1, -1, -1]}
+train_type time
+{'ele_recall': ['error', -1, -1, -1], 'mice_recall': ['error', -1, -1, -1], 'acc': ['error', -1, -1, -1]}
